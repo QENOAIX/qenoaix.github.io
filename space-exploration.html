@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Space Exploration — QENOAIX.</title>
+
+<meta name="description"
+content="Explore historic and modern space missions, spacecraft, rovers, telescopes and human spaceflight.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#07110d;
+    color:#edf5df;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(7,17,13,.94);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #243c2b;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:800;
+    letter-spacing:4px;
+}
+
+nav a{
+    color:#c2d1b7;
+    font-size:.85rem;
+}
+
+.hero{
+    padding:85px 8% 65px;
+    max-width:1150px;
+    margin:auto;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(181,255,72,.10),transparent 32%);
+}
+
+.tag{
+    color:#b6ff45;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.8rem;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(3rem,8vw,6rem);
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:800px;
+    color:#b5c5b0;
+    font-size:1.1rem;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:0 8% 80px;
+}
+
+.section-title{
+    color:#b6ff45;
+    font-size:2rem;
+    margin:55px 0 20px;
+}
+
+.intro{
+    max-width:850px;
+    color:#c0cdbb;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:#0c1b14;
+    border:1px solid #294532;
+    border-radius:18px;
+    padding:25px;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#b6ff45;
+}
+
+.card h3{
+    color:#b6ff45;
+    margin-bottom:10px;
+    font-size:1.25rem;
+}
+
+.card p{
+    color:#b4c3ae;
+}
+
+.year{
+    color:#dce8cf !important;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.fact{
+    margin-top:40px;
+    padding:30px;
+    background:#0c1b14;
+    border-left:4px solid #b6ff45;
+    border-radius:12px;
+}
+
+.fact h3{
+    color:#b6ff45;
+    margin-bottom:8px;
+}
+
+footer{
+    text-align:center;
+    padding:30px 8%;
+    border-top:1px solid #243c2b;
+    color:#81907d;
+    font-size:.85rem;
+}
+
+@media(max-width:600px){
+    nav{
+        padding:16px 5%;
+    }
+
+    .hero{
+        padding:60px 5% 45px;
+    }
+
+    .container{
+        padding:0 5% 60px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">QENOAIX.</div>
+    <a href="astronomy.html">← BACK TO ASTRONOMY</a>
+</nav>
+
+<section class="hero">
+
+    <div class="tag">QENOAIX. / SPACE EXPLORATION</div>
+
+    <h1>Space Exploration.</h1>
+
+    <p>
+        From the first satellites and human missions to robotic
+        explorers travelling across the Solar System, spacecraft
+        have transformed our understanding of the universe.
+    </p>
+
+</section>
+
+<main class="container">
+
+    <h2 class="section-title">What Is Space Exploration?</h2>
+
+    <p class="intro">
+        Space exploration is the investigation of space beyond Earth's
+        atmosphere using spacecraft, satellites, telescopes, landers,
+        rovers and human missions. It allows scientists to study planets,
+        moons, asteroids, comets, stars and the wider universe.
+    </p>
+
+
+    <h2 class="section-title">Historic Missions</h2>
+
+    <div class="card-grid">
+
+        <article class="card">
+            <p class="year">1957</p>
+            <h3>🛰️ Sputnik 1</h3>
+            <p>
+                The Soviet Union's Sputnik 1 became the first artificial
+                satellite to orbit Earth, beginning the Space Age.
+            </p>
+        </article>
+
+        <article class="card">
+            <p class="year">1961</p>
+            <h3>🚀 Vostok 1</h3>
+            <p>
+                Yuri Gagarin became the first human to travel into space
+                during the Vostok 1 mission.
+            </p>
+        </article>
+
+        <article class="card">
+            <p class="year">1969</p>
+            <h3>🌕 Apollo 11</h3>
+            <p>
+                NASA's Apollo 11 mission carried astronauts to the Moon
+                and achieved the first crewed lunar landing.
+            </p>
+        </article>
+
+        <article class="card">
+            <p class="year">1977</p>
+            <h3>🌌 Voyager</h3>
+            <p>
+                The Voyager spacecraft began journeys that eventually
+                carried them into the outer Solar System and beyond.
+            </p>
+        </article>
+
+    </div>
+
+
+    <h2 class="section-title">Famous Robotic Explorers</h2>
+
+    <div class="card-grid">
+
+        <article class="card">
+            <h3>🔴 Mars Rovers</h3>
+            <p>
+                Robotic rovers such as Spirit, Opportunity, Curiosity
+                and Perseverance have investigated the Martian surface,
+                geology and ancient environments.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🟠 Juno</h3>
+            <p>
+                NASA's Juno spacecraft studies Jupiter's atmosphere,
+                magnetic field, interior and enormous polar regions.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🪐 Cassini-Huygens</h3>
+            <p>
+                Cassini spent years studying Saturn and its moons.
+                The Huygens probe descended through the atmosphere of
+                Saturn's moon Titan and reached its surface.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>☄️ Rosetta</h3>
+            <p>
+                ESA's Rosetta mission studied comet 67P/Churyumov-Gerasimenko
+                and deployed the Philae lander onto the comet.
+            </p>
+        </article>
+
+    </div>
+
+
+    <h2 class="section-title">Important Spacecraft</h2>
+
+    <div class="card-grid">
+
+        <article class="card">
+            <h3>🚀 Space Shuttle</h3>
+            <p>
+                NASA's Space Shuttle system was designed for repeated
+                launches and landings and played a major role in building
+                and servicing the International Space Station.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🛰️ James Webb Space Telescope</h3>
+            <p>
+                The James Webb Space Telescope observes the universe
+                primarily in infrared wavelengths, studying galaxies,
+                stars, planetary systems and distant cosmic objects.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🏠 International Space Station</h3>
+            <p>
+                The International Space Station is a large orbital
+                laboratory where astronauts conduct scientific research
+                in microgravity.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🚀 Modern Crew Vehicles</h3>
+            <p>
+                Modern crew spacecraft transport astronauts to and from
+                low Earth orbit and support the continuing development
+                of human spaceflight.
+            </p>
+        </article>
+
+    </div>
+
+
+    <h2 class="section-title">Types of Space Missions</h2>
+
+    <div class="card-grid">
+
+        <article class="card">
+            <h3>🌍 Earth Observation</h3>
+            <p>
+                Satellites observe Earth's atmosphere, oceans, land,
+                weather and climate.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🪐 Planetary Exploration</h3>
+            <p>
+                Spacecraft visit planets and moons to investigate their
+                surfaces, atmospheres, interiors and histories.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>☄️ Small-Body Missions</h3>
+            <p>
+                Missions to asteroids and comets help scientists study
+                ancient material left over from the formation of the
+                Solar System.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🔭 Space Telescopes</h3>
+            <p>
+                Telescopes above Earth's atmosphere can observe wavelengths
+                of light that are blocked or distorted by the atmosphere.
+            </p>
+        </article>
+
+    </div>
+
+
+    <div class="fact">
+
+        <h3>🚀 QENOAIX Fact</h3>
+
+        <p>
+            Spacecraft do not all travel in straight lines. Mission
+            planners can use planetary gravity assists to change a
+            spacecraft's speed or trajectory while saving propellant.
+        </p>
+
+    </div>
+
+</main>
+
+<footer>
+    © 2026 QENOAIX.™
+</footer>
+
+</body>
+</html>
