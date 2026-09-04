@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Black Holes — QENOAIX.</title>
+
+<meta name="description"
+content="Explore the anatomy and types of black holes, from stellar-mass black holes to supermassive black holes.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#07110d;
+    color:#edf5df;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(7,17,13,.94);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #243c2b;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:800;
+    letter-spacing:4px;
+}
+
+nav a{
+    color:#c2d1b7;
+    font-size:.85rem;
+    letter-spacing:.5px;
+}
+
+.hero{
+    padding:85px 8% 65px;
+    max-width:1150px;
+    margin:auto;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(181,255,72,.10),transparent 32%);
+}
+
+.tag{
+    color:#b6ff45;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.8rem;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(3rem,8vw,6rem);
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:780px;
+    color:#b5c5b0;
+    font-size:1.1rem;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:0 8% 80px;
+}
+
+.section-title{
+    color:#b6ff45;
+    font-size:2rem;
+    margin:55px 0 20px;
+}
+
+.intro{
+    color:#c0cdbb;
+    max-width:850px;
+}
+
+.anatomy-grid,
+.type-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:#0c1b14;
+    border:1px solid #294532;
+    border-radius:18px;
+    padding:25px;
+    transition:transform .2s,border-color .2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#b6ff45;
+}
+
+.card h3{
+    color:#b6ff45;
+    font-size:1.25rem;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#b4c3ae;
+}
+
+.number{
+    display:inline-block;
+    color:#07110d;
+    background:#b6ff45;
+    font-weight:bold;
+    border-radius:50%;
+    width:30px;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+    margin-bottom:12px;
+}
+
+.type-card{
+    min-height:230px;
+}
+
+.mass{
+    color:#dfe9d3 !important;
+    font-weight:bold;
+    margin-top:12px;
+}
+
+.fact{
+    margin-top:40px;
+    padding:30px;
+    background:#0c1b14;
+    border-left:4px solid #b6ff45;
+    border-radius:12px;
+}
+
+.fact h3{
+    color:#b6ff45;
+    margin-bottom:8px;
+}
+
+.timeline{
+    margin-top:30px;
+    display:grid;
+    gap:14px;
+}
+
+.step{
+    padding:20px;
+    background:#0c1b14;
+    border:1px solid #294532;
+    border-radius:14px;
+}
+
+.step strong{
+    color:#b6ff45;
+}
+
+footer{
+    text-align:center;
+    padding:30px 8%;
+    border-top:1px solid #243c2b;
+    color:#81907d;
+    font-size:.85rem;
+}
+
+@media(max-width:600px){
+    nav{
+        padding:16px 5%;
+    }
+
+    .hero{
+        padding:60px 5% 45px;
+    }
+
+    .container{
+        padding:0 5% 60px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">QENOAIX.</div>
+    <a href="astronomy.html">← BACK TO ASTRONOMY</a>
+</nav>
+
+<section class="hero">
+
+    <div class="tag">QENOAIX. / DEEP SPACE</div>
+
+    <h1>Black Holes.</h1>
+
+    <p>
+        Explore the anatomy of black holes and the major
+        categories astronomers use to describe them.
+        These extreme objects are regions of spacetime where
+        gravity becomes extraordinarily strong.
+    </p>
+
+</section>
+
+<main class="container">
+
+    <h2 class="section-title">What Is a Black Hole?</h2>
+
+    <p class="intro">
+        A black hole is a region of spacetime whose gravity is
+        strong enough that, once something passes its event
+        horizon, it cannot escape back out. Black holes are
+        described by general relativity and are detected through
+        their effects on nearby matter, light, and spacetime.
+    </p>
+
+
+    <h2 class="section-title">Anatomy of a Black Hole</h2>
+
+    <div class="anatomy-grid">
+
+        <article class="card">
+            <span class="number">1</span>
+            <h3>Event Horizon</h3>
+            <p>
+                The event horizon is the boundary around a black
+                hole beyond which escape to the outside universe
+                is no longer possible.
+            </p>
+        </article>
+
+        <article class="card">
+            <span class="number">2</span>
+            <h3>Accretion Disk</h3>
+            <p>
+                A disk of hot gas and other material can form around
+                some black holes. Friction and compression can make
+                this material extremely hot and bright.
+            </p>
+        </article>
+
+        <article class="card">
+            <span class="number">3</span>
+            <h3>Photon Sphere</h3>
+            <p>
+                Around a non-rotating black hole, the photon sphere
+                is a region where light can travel on unstable
+                circular paths.
+            </p>
+        </article>
+
+        <article class="card">
+            <span class="number">4</span>
+            <h3>Singularity</h3>
+            <p>
+                Classical general relativity predicts a singularity
+                at the centre of a black hole, where its equations
+                indicate extremely extreme spacetime curvature.
+                A complete theory of quantum gravity may be needed
+                to describe the true physics there.
+            </p>
+        </article>
+
+        <article class="card">
+            <span class="number">5</span>
+            <h3>Relativistic Jets</h3>
+            <p>
+                Some actively feeding black holes can produce
+                powerful jets of particles moving outward along
+                directions near their rotational axes.
+            </p>
+        </article>
+
+        <article class="card">
+            <span class="number">6</span>
+            <h3>Black Hole Shadow</h3>
+            <p>
+                The shadow is a dark region produced by the way
+                strong gravity bends and captures light around
+                a black hole. It is larger than the event horizon
+                itself.
+            </p>
+        </article>
+
+    </div>
+
+
+    <h2 class="section-title">Major Types of Black Holes</h2>
+
+    <div class="type-grid">
+
+        <article class="card type-card">
+            <h3>⭐ Stellar-Mass Black Holes</h3>
+            <p>
+                These black holes typically form when massive stars
+                reach the end of their lives and their cores collapse.
+                They generally have masses of several times that of
+                the Sun to a few tens of solar masses.
+            </p>
+            <p class="mass">
+                Typical scale: ~3–100 solar masses
+            </p>
+        </article>
+
+        <article class="card type-card">
+            <h3>🌌 Intermediate-Mass Black Holes</h3>
+            <p>
+                Intermediate-mass black holes are expected to be
+                heavier than typical stellar-mass black holes but
+                much lighter than supermassive black holes. Their
+                existence is an active area of astronomical research.
+            </p>
+            <p class="mass">
+                Approximate scale: ~100–100,000 solar masses
+            </p>
+        </article>
+
+        <article class="card type-card">
+            <h3>🌀 Supermassive Black Holes</h3>
+            <p>
+                These enormous black holes lie at the centres of
+                most large galaxies. They can contain millions to
+                billions of times the mass of the Sun.
+            </p>
+            <p class="mass">
+                Typical scale: millions–billions of solar masses
+            </p>
+        </article>
+
+        <article class="card type-card">
+            <h3>❓ Primordial Black Holes</h3>
+            <p>
+                Primordial black holes are hypothetical black holes
+                that could have formed in the extremely early
+                universe. No primordial black hole has been
+                conclusively confirmed.
+            </p>
+            <p class="mass">
+                Status: Hypothetical
+            </p>
+        </article>
+
+    </div>
+
+
+    <h2 class="section-title">How Black Holes Can Form</h2>
+
+    <div class="timeline">
+
+        <div class="step">
+            <strong>01 — Massive star</strong><br>
+            A sufficiently massive star eventually exhausts the
+            nuclear fuel that supports its core.
+        </div>
+
+        <div class="step">
+            <strong>02 — Core collapse</strong><br>
+            The star's core can collapse under its own gravity
+            after the star reaches the end of its evolutionary path.
+        </div>
+
+        <div class="step">
+            <strong>03 — Compact object</strong><br>
+            Depending on the remaining core mass and other conditions,
+            the collapse can produce a black hole.
+        </div>
+
+        <div class="step">
+            <strong>04 — Growth</strong><br>
+            A black hole can grow by gaining mass from surrounding
+            material or by merging with other black holes.
+        </div>
+
+    </div>
+
+
+    <div class="fact">
+
+        <h3>🔭 QENOAIX Fact</h3>
+
+        <p>
+            Black holes themselves do not shine like ordinary stars.
+            Astronomers can nevertheless study them by observing
+            nearby matter, gravitational effects, gravitational waves,
+            and the way their strong gravity bends light.
+        </p>
+
+    </div>
+
+</main>
+
+<footer>
+    © 2026 QENOAIX.™
+</footer>
+
+</body>
+  </html>
