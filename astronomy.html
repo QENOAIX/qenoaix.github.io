@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Astronomy & Space — QENOAIX.</title>
+
+<meta name="description"
+content="Explore astronomy, space, planets, stars, galaxies and the mysteries of the universe with QENOAIX.">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#07110d;
+  color:#e9f5ee;
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* NAVIGATION */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 7%;
+  background:rgba(7,17,13,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #173b2a;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:4px;
+}
+
+.back{
+  color:#b7d8c5;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+/* HERO */
+
+.hero{
+  min-height:65vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:80px 7%;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(181,255,72,.12),transparent 30%),
+    radial-gradient(circle at 20% 80%,rgba(66,145,255,.08),transparent 35%);
+}
+
+.tag{
+  color:#b6ff45;
+  font-size:13px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:clamp(48px,9vw,100px);
+  line-height:.95;
+  letter-spacing:-4px;
+  max-width:900px;
+}
+
+.hero p{
+  max-width:680px;
+  margin-top:25px;
+  color:#a9c2b2;
+  font-size:18px;
+}
+
+/* CONTENT */
+
+.section{
+  padding:80px 7%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.section-intro{
+  color:#9eb7a8;
+  max-width:700px;
+  margin-bottom:45px;
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+
+.card{
+  padding:28px;
+  min-height:210px;
+  border:1px solid #1b4430;
+  border-radius:18px;
+  background:#0b1a13;
+  transition:.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#b6ff45;
+}
+
+.icon{
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+.card h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#9eb7a8;
+  font-size:15px;
+}
+
+/* FEATURE */
+
+.feature{
+  margin-top:60px;
+  padding:35px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#10251a,#0a1711);
+  border:1px solid #1b4430;
+}
+
+.feature h2{
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+.feature p{
+  color:#a9c2b2;
+  max-width:750px;
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:50px;
+  padding:30px 7%;
+  border-top:1px solid #173b2a;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  color:#789786;
+  font-size:13px;
+}
+
+footer strong{
+  color:#e9f5ee;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+  nav{
+    padding:18px 5%;
+  }
+
+  .hero{
+    padding:70px 5%;
+  }
+
+  .section{
+    padding:60px 5%;
+  }
+
+  h1{
+    letter-spacing:-2px;
+  }
+
+  footer{
+    padding:25px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">QENOAIX.</div>
+  <a class="back" href="explore.html">← BACK TO EXPLORE</a>
+</nav>
+
+<section class="hero">
+
+  <div class="tag">QENOAIX. / ASTRONOMY</div>
+
+  <h1>
+    Astronomy<br>
+    & Space.
+  </h1>
+
+  <p>
+    Explore planets, stars, galaxies, black holes and the
+    incredible universe beyond Earth.
+  </p>
+
+</section>
+
+<section class="section">
+
+  <h2 class="section-title">Explore the Universe.</h2>
+
+  <p class="section-intro">
+    Astronomy is the study of everything beyond Earth.
+    From tiny moons to enormous galaxies, there is an
+    almost endless amount to discover.
+  </p>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="icon">🌍</div>
+      <h3>Planets</h3>
+      <p>
+        Discover the planets of our Solar System and learn
+        what makes each world unique.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">⭐</div>
+      <h3>Stars</h3>
+      <p>
+        Learn how stars form, live their lives and eventually
+        change or die.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🌌</div>
+      <h3>Galaxies</h3>
+      <p>
+        Explore enormous collections of stars, gas, dust and
+        dark matter across the universe.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🕳️</div>
+      <h3>Black Holes</h3>
+      <p>
+        Understand these extreme objects and how gravity
+        behaves around them.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🚀</div>
+      <h3>Space Exploration</h3>
+      <p>
+        Discover spacecraft, missions, telescopes and
+        humanity's journey beyond Earth.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🔭</div>
+      <h3>Telescopes</h3>
+      <p>
+        Learn how astronomers observe distant objects and
+        uncover the secrets of the cosmos.
+      </p>
+    </article>
+
+  </div>
+
+  <div class="feature">
+
+    <h2>🌠 The Big Question</h2>
+
+    <p>
+      How did the universe begin, how will it evolve, and
+      are we alone in it? Astronomy combines physics,
+      mathematics and technology to investigate questions
+      like these.
+    </p>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div>
+    <strong>QENOAIX.</strong>
+    <span> Research • Development • Discovery</span>
+  </div>
+
+  <a href="explore.html">BACK TO EXPLORE ↑</a>
+
+</footer>
+
+</body>
+</html>
