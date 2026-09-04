@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Telescopes — QENOAIX.</title>
+
+<meta name="description"
+content="Learn how telescopes work and explore famous space and ground-based telescopes.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#07110d;
+    color:#edf5df;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(7,17,13,.94);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #243c2b;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:800;
+    letter-spacing:4px;
+}
+
+nav a{
+    color:#c2d1b7;
+    font-size:.85rem;
+}
+
+.hero{
+    padding:85px 8% 65px;
+    max-width:1150px;
+    margin:auto;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(181,255,72,.10),transparent 32%);
+}
+
+.tag{
+    color:#b6ff45;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.8rem;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(3rem,8vw,6rem);
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:800px;
+    color:#b5c5b0;
+    font-size:1.1rem;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:0 8% 80px;
+}
+
+.section-title{
+    color:#b6ff45;
+    font-size:2rem;
+    margin:55px 0 20px;
+}
+
+.intro{
+    color:#c0cdbb;
+    max-width:850px;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:#0c1b14;
+    border:1px solid #294532;
+    border-radius:18px;
+    padding:25px;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#b6ff45;
+}
+
+.card h3{
+    color:#b6ff45;
+    margin-bottom:10px;
+    font-size:1.25rem;
+}
+
+.card p{
+    color:#b4c3ae;
+}
+
+.step{
+    display:grid;
+    grid-template-columns:55px 1fr;
+    gap:18px;
+    align-items:start;
+    margin-top:15px;
+    padding:22px;
+    background:#0c1b14;
+    border:1px solid #294532;
+    border-radius:16px;
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#b6ff45;
+    color:#07110d;
+    font-weight:bold;
+}
+
+.step h3{
+    margin-bottom:5px;
+}
+
+.step p{
+    color:#b4c3ae;
+}
+
+.fact{
+    margin-top:40px;
+    padding:30px;
+    background:#0c1b14;
+    border-left:4px solid #b6ff45;
+    border-radius:12px;
+}
+
+.fact h3{
+    color:#b6ff45;
+    margin-bottom:8px;
+}
+
+footer{
+    text-align:center;
+    padding:30px 8%;
+    border-top:1px solid #243c2b;
+    color:#81907d;
+    font-size:.85rem;
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:16px 5%;
+    }
+
+    .hero{
+        padding:60px 5% 45px;
+    }
+
+    .container{
+        padding:0 5% 60px;
+    }
+
+    .step{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">QENOAIX.</div>
+    <a href="astronomy.html">← BACK TO ASTRONOMY</a>
+</nav>
+
+<section class="hero">
+
+    <div class="tag">QENOAIX. / OBSERVING THE UNIVERSE</div>
+
+    <h1>Telescopes.</h1>
+
+    <p>
+        Telescopes collect electromagnetic radiation from distant
+        objects, allowing astronomers to study stars, planets,
+        galaxies, nebulae and the early universe.
+    </p>
+
+</section>
+
+<main class="container">
+
+    <h2 class="section-title">How Does a Telescope Work?</h2>
+
+    <p class="intro">
+        The basic purpose of a telescope is to collect more light
+        than the human eye can gather and to form a useful image
+        or measurement of a distant object. Different telescopes
+        are designed to detect different wavelengths of light.
+    </p>
+
+
+    <h2 class="section-title">The Basic Process</h2>
+
+    <div class="step">
+
+        <div class="step-number">1</div>
+
+        <div>
+            <h3>🔭 Collect Light</h3>
+            <p>
+                A telescope uses a mirror, lens or another detector
+                system to collect radiation arriving from a distant
+                astronomical object.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="step">
+
+        <div class="step-number">2</div>
+
+        <div>
+            <h3>🎯 Focus the Radiation</h3>
+            <p>
+                Optical systems guide the incoming radiation toward
+                a focus. In optical telescopes this is usually done
+                using lenses or curved mirrors.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="step">
+
+        <div class="step-number">3</div>
+
+        <div>
+            <h3>📷 Detect the Signal</h3>
+            <p>
+                Cameras, sensors or other scientific instruments
+                record the incoming radiation and convert it into
+                useful data.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="step">
+
+        <div class="step-number">4</div>
+
+        <div>
+            <h3>💻 Process the Data</h3>
+            <p>
+                Computers and astronomers process the observations
+                to create images, spectra, measurements and other
+                scientific results.
+            </p>
+        </div>
+
+    </div>
+
+
+    <h2 class="section-title">Main Types of Telescopes</h2>
+
+    <div class="card-grid">
+
+        <article class="card">
+            <h3>🔭 Refracting Telescope</h3>
+            <p>
+                Uses lenses to collect and focus visible light.
+                Refracting telescopes were among the earliest
+                optical telescopes.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🪞 Reflecting Telescope</h3>
+            <p>
+                Uses curved mirrors instead of a large objective
+                lens. Most modern large optical observatories use
+                reflecting designs.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>📡 Radio Telescope</h3>
+            <p>
+                Detects radio waves from astronomical sources.
+                Many radio telescopes use large dish-shaped antennas.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🌡️ Infrared Telescope</h3>
+            <p>
+                Detects infrared radiation, allowing astronomers to
+                study cool objects, dust clouds and distant galaxies.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>☢️ X-ray Telescope</h3>
+            <p>
+                Detects high-energy X-rays from objects such as
+                black holes, neutron stars and hot cosmic gas.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>⚡ Gamma-ray Telescope</h3>
+            <p>
+                Detects extremely energetic gamma rays produced by
+                some of the most powerful events in the universe.
+            </p>
+        </article>
+
+    </div>
+
+
+    <h2 class="section-title">Famous Telescopes</h2>
+
+    <div class="card-grid">
+
+        <article class="card">
+            <h3>🌌 Hubble Space Telescope</h3>
+            <p>
+                Launched in 1990, Hubble observes primarily in
+                ultraviolet, visible and near-infrared wavelengths.
+                It has produced many iconic astronomical images.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>✨ James Webb Space Telescope</h3>
+            <p>
+                JWST is a large infrared observatory designed to
+                investigate the early universe, galaxies, stars,
+                planets and planetary atmospheres.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🔭 Very Large Telescope</h3>
+            <p>
+                The European Southern Observatory's Very Large
+                Telescope is a powerful ground-based optical and
+                infrared observing facility in Chile.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>📡 FAST</h3>
+            <p>
+                The Five-hundred-meter Aperture Spherical Telescope
+                is a huge radio telescope in China used for
+                astronomical observations at radio wavelengths.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>📡 ALMA</h3>
+            <p>
+                The Atacama Large Millimeter/submillimeter Array is
+                a collection of radio antennas in Chile that studies
+                cold gas, dust and distant astronomical objects.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🔭 Keck Observatory</h3>
+            <p>
+                The twin Keck telescopes in Hawaii use large segmented
+                mirrors for observations of objects across the
+                universe.
+            </p>
+        </article>
+
+    </div>
+
+
+    <h2 class="section-title">Why Put Telescopes in Space?</h2>
+
+    <p class="intro">
+        Earth's atmosphere can absorb or distort portions of
+        incoming electromagnetic radiation. Space telescopes
+        operate above the atmosphere, allowing them to observe
+        wavelengths and details that can be difficult or impossible
+        to study from the ground.
+    </p>
+
+
+    <div class="fact">
+
+        <h3>🔭 QENOAIX Fact</h3>
+
+        <p>
+            A telescope's ability to collect light depends strongly
+            on the size of its light-collecting area. A larger
+            telescope can gather more light, helping astronomers
+            observe fainter objects and obtain more detailed data.
+        </p>
+
+    </div>
+
+</main>
+
+<footer>
+    © 2026 QENOAIX.™
+</footer>
+
+</body>
+  </html>
