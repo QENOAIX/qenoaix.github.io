@@ -302,7 +302,7 @@ form?.addEventListener('submit', async (event)=>{
         'Content-Type':'application/json',
         'Accept':'application/json'
       },
-      body:JSON.stringify(Object.fromEntries(new FormData(form)))
+      body:new FormData(form)
     });
 
     const result=await response.json().catch(()=>({}));
