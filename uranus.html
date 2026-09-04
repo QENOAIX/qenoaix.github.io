@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Uranus — QENOAIX.</title>
+
+<meta name="description"
+content="Explore Uranus — the seventh planet from the Sun and an ice giant with a unique tilted rotation.">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#07110d;
+  color:#e9f5ee;
+  line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 7%;
+  background:rgba(7,17,13,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #173b2a;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:4px;
+}
+
+.back{
+  color:#b7d8c5;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+.hero{
+  padding:90px 7% 70px;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(181,255,72,.12),transparent 30%);
+}
+
+.tag{
+  color:#b6ff45;
+  font-size:13px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:clamp(55px,10vw,100px);
+  line-height:.95;
+  letter-spacing:-4px;
+}
+
+.hero p{
+  max-width:700px;
+  margin-top:25px;
+  color:#a9c2b2;
+  font-size:18px;
+}
+
+.section{
+  padding:60px 7%;
+  max-width:1100px;
+  margin:auto;
+}
+
+.section h2{
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+.info{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-top:35px;
+}
+
+.card{
+  padding:25px;
+  background:#0b1a13;
+  border:1px solid #1b4430;
+  border-radius:18px;
+}
+
+.card h3{
+  color:#b6ff45;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#a9c2b2;
+}
+
+.fact{
+  margin-top:45px;
+  padding:30px;
+  border:1px solid #1b4430;
+  border-radius:20px;
+  background:#0b1a13;
+}
+
+.fact h2{
+  margin-bottom:10px;
+}
+
+footer{
+  margin-top:50px;
+  padding:30px 7%;
+  border-top:1px solid #173b2a;
+  color:#789786;
+  font-size:13px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+footer strong{
+  color:#e9f5ee;
+}
+
+@media(max-width:600px){
+  nav{
+    padding:18px 5%;
+  }
+
+  .hero,
+  .section{
+    padding-left:5%;
+    padding-right:5%;
+  }
+
+  h1{
+    letter-spacing:-2px;
+  }
+
+  footer{
+    padding:25px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">QENOAIX.</div>
+  <a class="back" href="astronomy.html">← BACK TO ASTRONOMY</a>
+</nav>
+
+<section class="hero">
+
+  <div class="tag">QENOAIX. / SOLAR SYSTEM</div>
+
+  <h1>Uranus.</h1>
+
+  <p>
+    Uranus is the seventh planet from the Sun and an
+    ice giant known for its extreme axial tilt.
+  </p>
+
+</section>
+
+<section class="section">
+
+  <h2>About Uranus</h2>
+
+  <p>
+    Uranus is an ice giant made mostly of hydrogen and
+    helium, with significant amounts of water, methane
+    and ammonia in its deep atmosphere and interior.
+    Methane in the upper atmosphere contributes to its
+    blue-green appearance.
+  </p>
+
+  <div class="info">
+
+    <div class="card">
+      <h3>☀️ Distance from Sun</h3>
+      <p>About 2.87 billion km on average.</p>
+    </div>
+
+    <div class="card">
+      <h3>📏 Diameter</h3>
+      <p>About 50,724 km.</p>
+    </div>
+
+    <div class="card">
+      <h3>🕐 Orbital Period</h3>
+      <p>About 84 Earth years.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌍 Type</h3>
+      <p>Ice giant.</p>
+    </div>
+
+  </div>
+
+  <div class="fact">
+
+    <h2>🔎 Interesting Fact</h2>
+
+    <p>
+      Uranus rotates with an axial tilt of about 98 degrees,
+      making it appear to rotate almost on its side. This
+      extreme tilt produces very unusual seasonal patterns.
+    </p>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div>
+    <strong>QENOAIX.</strong>
+    <span> Research • Development • Discovery</span>
+  </div>
+
+  <a href="astronomy.html">BACK TO ASTRONOMY ↑</a>
+
+</footer>
+
+</body>
+</html>
