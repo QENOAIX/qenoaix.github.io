@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cybersecurity — QENOAIX.</title>
+
+<meta name="description" content="Explore cybersecurity, digital security, encryption, authentication, networks, data protection and the technologies used to protect computer systems.">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:#07110d;
+    color:#edf5df;
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.7;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 6%;
+    background:rgba(7,17,13,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #294532;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:#b6ff45;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.hero{
+    max-width:1150px;
+    margin:auto;
+    padding:120px 6% 100px;
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(182,255,69,.12),
+            transparent 35%
+        );
+}
+
+.tag{
+    color:#b6ff45;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(48px,8vw,88px);
+    line-height:1;
+    margin-bottom:30px;
+}
+
+.hero p{
+    max-width:760px;
+    color:#aeb8ae;
+    font-size:18px;
+}
+
+section{
+    max-width:1150px;
+    margin:auto;
+    padding:90px 6%;
+}
+
+.section-title{
+    font-size:42px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.intro{
+    max-width:760px;
+    color:#aeb8ae;
+    margin-bottom:45px;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#0c1b14;
+    border:1px solid #294532;
+    border-radius:18px;
+    padding:28px;
+    transition:.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#b6ff45;
+}
+
+.card h3{
+    color:#b6ff45;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.card p{
+    color:#aeb8ae;
+    font-size:15px;
+}
+
+.step{
+    display:grid;
+    grid-template-columns:70px 1fr;
+    gap:25px;
+    padding:25px 0;
+    border-bottom:1px solid #294532;
+}
+
+.step-number{
+    width:50px;
+    height:50px;
+    border:1px solid #b6ff45;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#b6ff45;
+    font-weight:700;
+}
+
+.step h3{
+    margin-bottom:7px;
+}
+
+.step p{
+    color:#aeb8ae;
+}
+
+.code-box{
+    margin-top:30px;
+    padding:28px;
+    background:#050b08;
+    border:1px solid #294532;
+    border-radius:14px;
+    color:#b6ff45;
+    font-family:monospace;
+    white-space:pre-line;
+}
+
+.fact{
+    margin-top:30px;
+    padding:30px;
+    border-left:3px solid #b6ff45;
+    background:#0c1b14;
+}
+
+.fact strong{
+    color:#b6ff45;
+}
+
+footer{
+    max-width:1150px;
+    margin:auto;
+    padding:60px 6%;
+    border-top:1px solid #294532;
+    color:#68736b;
+    font-size:13px;
+}
+
+@media(max-width:800px){
+
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    .hero{
+        padding-top:90px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:18px 5%;
+    }
+
+    nav a{
+        font-size:11px;
+    }
+
+    .step{
+        grid-template-columns:55px 1fr;
+        gap:15px;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">QENOAIX.</div>
+
+    <a href="ai-technology.html">
+        ← AI & TECHNOLOGY
+    </a>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="tag">
+        QENOAIX. / CYBERSECURITY
+    </div>
+
+    <h1>
+        Cybersecurity.
+    </h1>
+
+    <p>
+        Explore the science and engineering behind protecting
+        computers, networks, applications and digital information
+        from unauthorized access, disruption and misuse.
+    </p>
+
+</section>
+
+
+<!-- WHAT IS CYBERSECURITY -->
+
+<section>
+
+    <h2 class="section-title">
+        What Is Cybersecurity?
+    </h2>
+
+    <p class="intro">
+        Cybersecurity is the practice of protecting digital systems,
+        networks, applications and information from threats while
+        maintaining their confidentiality, integrity and availability.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Confidentiality</h3>
+            <p>
+                Ensuring that information is accessible only to
+                authorized people and systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Integrity</h3>
+            <p>
+                Protecting information from unauthorized alteration
+                or accidental modification.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Availability</h3>
+            <p>
+                Keeping systems and information accessible when
+                authorized users need them.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW SECURITY WORKS -->
+
+<section>
+
+    <h2 class="section-title">
+        How Cybersecurity Works
+    </h2>
+
+    <p class="intro">
+        Security uses multiple layers of technologies and practices
+        to identify risks, protect systems and respond to problems.
+    </p>
+
+
+    <div class="step">
+
+        <div class="step-number">01</div>
+
+        <div>
+            <h3>Identify</h3>
+
+            <p>
+                Organizations identify important systems, information,
+                devices and potential security risks.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">02</div>
+
+        <div>
+            <h3>Protect</h3>
+
+            <p>
+                Security controls such as authentication, encryption
+                and access management help reduce risks.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">03</div>
+
+        <div>
+            <h3>Detect</h3>
+
+            <p>
+                Monitoring systems can identify unusual activity
+                and potential security events.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">04</div>
+
+        <div>
+            <h3>Respond</h3>
+
+            <p>
+                Security teams investigate incidents and take
+                appropriate actions to contain them.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">05</div>
+
+        <div>
+            <h3>Recover</h3>
+
+            <p>
+                Systems can be restored and security practices
+                improved after an incident.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SECURITY PIPELINE -->
+
+<section>
+
+    <h2 class="section-title">
+        Security Pipeline
+    </h2>
+
+    <p class="intro">
+        A simplified model of the cybersecurity lifecycle.
+    </p>
+
+    <div class="code-box">
+IDENTIFY
+   ↓
+PROTECT
+   ↓
+DETECT
+   ↓
+RESPOND
+   ↓
+RECOVER
+   ↓
+IMPROVE
+    </div>
+
+</section>
+
+
+<!-- CORE AREAS -->
+
+<section>
+
+    <h2 class="section-title">
+        Core Areas of Cybersecurity
+    </h2>
+
+    <p class="intro">
+        Cybersecurity covers many different areas because modern
+        digital systems have many layers that need protection.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Network Security</h3>
+            <p>
+                Protecting networks and communications from unauthorized
+                access and harmful activity.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Application Security</h3>
+            <p>
+                Designing and maintaining software with security
+                protections throughout its development.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud Security</h3>
+            <p>
+                Protecting applications, data and infrastructure
+                hosted on cloud computing platforms.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Data Security</h3>
+            <p>
+                Protecting information throughout its storage,
+                processing and transmission.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Identity & Access</h3>
+            <p>
+                Managing who can access systems and what resources
+                they are allowed to use.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Security Operations</h3>
+            <p>
+                Monitoring systems, investigating alerts and
+                coordinating responses to security events.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AUTHENTICATION -->
+
+<section>
+
+    <h2 class="section-title">
+        Authentication & Access
+    </h2>
+
+    <p class="intro">
+        Authentication verifies identity, while authorization determines
+        what an authenticated user or system is allowed to access.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Passwords</h3>
+            <p>
+                Secret credentials can be used to verify a user's
+                identity when accessing an account.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Multi-Factor Authentication</h3>
+            <p>
+                Multiple independent verification factors can provide
+                stronger protection than a password alone.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Authorization</h3>
+            <p>
+                Access-control systems determine which resources
+                an authenticated identity can use.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ENCRYPTION -->
+
+<section>
+
+    <h2 class="section-title">
+        Encryption
+    </h2>
+
+    <p class="intro">
+        Encryption transforms readable information into a protected
+        form so that only authorized parties with the appropriate
+        key can recover the original information.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Symmetric Encryption</h3>
+            <p>
+                The same secret key is used for encryption and
+                decryption.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Asymmetric Encryption</h3>
+            <p>
+                A pair of related keys can be used for encryption,
+                decryption and secure communication.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Hashing</h3>
+            <p>
+                Hash functions produce fixed-size values that can
+                help verify data and securely handle certain credentials.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SECURITY TECHNOLOGIES -->
+
+<section>
+
+    <h2 class="section-title">
+        Security Technologies
+    </h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Firewalls</h3>
+            <p>
+                Security controls can filter network traffic according
+                to defined rules.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Intrusion Detection</h3>
+            <p>
+                Monitoring systems can identify suspicious patterns
+                and potential security events.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Endpoint Security</h3>
+            <p>
+                Computers and other connected devices can be protected
+                through security software and management systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Security Monitoring</h3>
+            <p>
+                Logs and system events can be analyzed to detect
+                unusual activity.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Backups</h3>
+            <p>
+                Reliable backups help organizations recover important
+                information after failures or security incidents.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Secure Development</h3>
+            <p>
+                Security can be integrated throughout the software
+                development lifecycle.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CYBERSECURITY + AI -->
+
+<section>
+
+    <h2 class="section-title">
+        Cybersecurity & AI
+    </h2>
+
+    <p class="intro">
+        Artificial intelligence can assist cybersecurity by analyzing
+        large amounts of information, identifying unusual patterns
+        and helping security teams prioritize events.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Anomaly Detection</h3>
+            <p>
+                Machine learning systems can help identify activity
+                that differs from expected patterns.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Threat Analysis</h3>
+            <p>
+                AI systems can assist analysts in processing large
+                quantities of security information.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Automated Defense</h3>
+            <p>
+                Some security systems can automatically respond to
+                predefined or detected events.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SECURITY PRINCIPLES -->
+
+<section>
+
+    <h2 class="section-title">
+        Good Security Practices
+    </h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Keep Software Updated</h3>
+            <p>
+                Updates can include important security fixes and
+                improvements.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Use Strong Authentication</h3>
+            <p>
+                Strong authentication methods reduce the risk of
+                unauthorized account access.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Protect Important Data</h3>
+            <p>
+                Sensitive information should be handled carefully
+                and protected with appropriate security controls.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FUTURE -->
+
+<section>
+
+    <h2 class="section-title">
+        The Future of Cybersecurity
+    </h2>
+
+    <p class="intro">
+        As connected devices, cloud computing and AI continue to grow,
+        cybersecurity will become increasingly important across
+        digital infrastructure.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>AI-Assisted Security</h3>
+            <p>
+                Intelligent systems may help security teams analyze
+                increasingly large and complex datasets.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Zero Trust</h3>
+            <p>
+                Modern security architectures can continuously verify
+                identities, devices and access requests.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Secure Connected Systems</h3>
+            <p>
+                IoT devices, vehicles, infrastructure and other
+                connected systems will require stronger security.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FACT -->
+
+<section>
+
+    <div class="fact">
+
+        <strong>QENOAIX. FACT</strong>
+
+        <p>
+            Cybersecurity is not just about preventing attacks.
+            It also involves preparing systems, detecting problems,
+            responding to incidents and recovering afterward.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    QENOAIX. — Research & Development
+
+</footer>
+
+</body>
+  </html>
