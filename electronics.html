@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Electronics — QENOAIX.</title>
+
+<meta name="description" content="Explore electronics, circuits, components, semiconductors, digital systems, microcontrollers, sensors, communication systems and modern electronic technology.">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:#07110d;
+    color:#edf5df;
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.7;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 6%;
+    background:rgba(7,17,13,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #294532;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:#b6ff45;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.hero{
+    max-width:1150px;
+    margin:auto;
+    padding:120px 6% 100px;
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(182,255,69,.12),
+            transparent 35%
+        );
+}
+
+.tag{
+    color:#b6ff45;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(48px,8vw,88px);
+    line-height:1;
+    margin-bottom:30px;
+}
+
+.hero p{
+    max-width:760px;
+    color:#aeb8ae;
+    font-size:18px;
+}
+
+section{
+    max-width:1150px;
+    margin:auto;
+    padding:90px 6%;
+}
+
+.section-title{
+    font-size:42px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.intro{
+    max-width:760px;
+    color:#aeb8ae;
+    margin-bottom:45px;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#0c1b14;
+    border:1px solid #294532;
+    border-radius:18px;
+    padding:28px;
+    transition:.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#b6ff45;
+}
+
+.card h3{
+    color:#b6ff45;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.card p{
+    color:#aeb8ae;
+    font-size:15px;
+}
+
+.step{
+    display:grid;
+    grid-template-columns:70px 1fr;
+    gap:25px;
+    padding:25px 0;
+    border-bottom:1px solid #294532;
+}
+
+.step-number{
+    width:50px;
+    height:50px;
+    border:1px solid #b6ff45;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#b6ff45;
+    font-weight:700;
+}
+
+.step h3{
+    margin-bottom:7px;
+}
+
+.step p{
+    color:#aeb8ae;
+}
+
+.code-box{
+    margin-top:30px;
+    padding:28px;
+    background:#050b08;
+    border:1px solid #294532;
+    border-radius:14px;
+    color:#b6ff45;
+    font-family:monospace;
+    white-space:pre-line;
+}
+
+.fact{
+    margin-top:30px;
+    padding:30px;
+    border-left:3px solid #b6ff45;
+    background:#0c1b14;
+}
+
+.fact strong{
+    color:#b6ff45;
+}
+
+footer{
+    max-width:1150px;
+    margin:auto;
+    padding:60px 6%;
+    border-top:1px solid #294532;
+    color:#68736b;
+    font-size:13px;
+}
+
+@media(max-width:800px){
+
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    .hero{
+        padding-top:90px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:18px 5%;
+    }
+
+    nav a{
+        font-size:11px;
+    }
+
+    .step{
+        grid-template-columns:55px 1fr;
+        gap:15px;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">QENOAIX.</div>
+
+    <a href="explore.html">
+        ← Explore
+    </a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="tag">
+        QENOAIX. / ELECTRONICS
+    </div>
+
+    <h1>
+        Electronics.
+    </h1>
+
+    <p>
+        Explore the science and engineering of electronic systems,
+        from fundamental circuits and semiconductors to sensors,
+        microcontrollers, communication systems and intelligent devices.
+    </p>
+
+</section>
+
+
+<!-- WHAT IS ELECTRONICS -->
+
+<section>
+
+    <h2 class="section-title">
+        What Is Electronics?
+    </h2>
+
+    <p class="intro">
+        Electronics is the branch of science and engineering concerned
+        with controlling the flow of electrical charge to process,
+        transmit, store and use information or energy.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Electricity</h3>
+            <p>
+                Electrical charge and current provide the foundation
+                for electronic systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Circuits</h3>
+            <p>
+                Electronic circuits connect components to control
+                electrical signals and perform useful functions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Signals</h3>
+            <p>
+                Electrical signals can represent information,
+                measurements and commands.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW ELECTRONICS WORKS -->
+
+<section>
+
+    <h2 class="section-title">
+        How an Electronic System Works
+    </h2>
+
+    <p class="intro">
+        Electronic systems commonly receive energy and information,
+        process signals and produce a useful output.
+    </p>
+
+
+    <div class="step">
+
+        <div class="step-number">01</div>
+
+        <div>
+            <h3>Power</h3>
+
+            <p>
+                A power source provides the electrical energy required
+                by the electronic circuit.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">02</div>
+
+        <div>
+            <h3>Input</h3>
+
+            <p>
+                Sensors, switches or other components provide signals
+                or information to the system.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">03</div>
+
+        <div>
+            <h3>Processing</h3>
+
+            <p>
+                Electronic components process or transform the
+                incoming electrical signals.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">04</div>
+
+        <div>
+            <h3>Control</h3>
+
+            <p>
+                Digital circuits or microcontrollers can make decisions
+                based on programmed instructions and input data.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">05</div>
+
+        <div>
+            <h3>Output</h3>
+
+            <p>
+                The system produces an output through displays,
+                motors, speakers, lights or other devices.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ELECTRONICS PIPELINE -->
+
+<section>
+
+    <h2 class="section-title">
+        Electronics Pipeline
+    </h2>
+
+    <p class="intro">
+        A simplified model of how information can move through
+        an electronic system.
+    </p>
+
+    <div class="code-box">
+POWER
+   ↓
+INPUT
+   ↓
+SENSING
+   ↓
+PROCESSING
+   ↓
+CONTROL
+   ↓
+OUTPUT
+    </div>
+
+</section>
+
+
+<!-- BASIC COMPONENTS -->
+
+<section>
+
+    <h2 class="section-title">
+        Basic Electronic Components
+    </h2>
+
+    <p class="intro">
+        Electronic circuits are built from components with different
+        electrical functions.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Resistor</h3>
+            <p>
+                A resistor limits or controls the flow of electrical
+                current and can create voltage differences.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Capacitor</h3>
+            <p>
+                A capacitor stores electrical energy in an electric
+                field and can be used for filtering and timing.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Inductor</h3>
+            <p>
+                An inductor stores energy in a magnetic field and
+                responds to changes in current.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Diode</h3>
+            <p>
+                A diode primarily allows current to flow in one
+                direction and is useful in many circuit applications.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Transistor</h3>
+            <p>
+                Transistors can act as electronic switches or
+                amplifying elements.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Integrated Circuit</h3>
+            <p>
+                Integrated circuits contain many electronic components
+                manufactured together on a semiconductor chip.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ANALOG & DIGITAL -->
+
+<section>
+
+    <h2 class="section-title">
+        Analog & Digital Electronics
+    </h2>
+
+    <p class="intro">
+        Electronic systems can process signals in different forms,
+        with analog and digital electronics representing two major
+        approaches.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Analog Electronics</h3>
+            <p>
+                Analog systems process continuously varying signals
+                such as voltage or current.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Electronics</h3>
+            <p>
+                Digital systems represent information using discrete
+                values, commonly binary states.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Mixed-Signal Systems</h3>
+            <p>
+                Many modern devices combine analog circuits with
+                digital processing.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SEMICONDUCTORS -->
+
+<section>
+
+    <h2 class="section-title">
+        Semiconductors
+    </h2>
+
+    <p class="intro">
+        Semiconductor materials have electrical properties that can
+        be controlled, making them fundamental to modern electronics.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Silicon</h3>
+            <p>
+                Silicon is widely used to manufacture electronic
+                components and integrated circuits.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Transistors</h3>
+            <p>
+                Semiconductor transistors form the basic switching
+                elements of modern digital electronics.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Microchips</h3>
+            <p>
+                Complex electronic systems can be integrated into
+                compact semiconductor chips.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DIGITAL LOGIC -->
+
+<section>
+
+    <h2 class="section-title">
+        Digital Logic
+    </h2>
+
+    <p class="intro">
+        Digital circuits use logic operations to process binary
+        information and implement computational functions.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>AND</h3>
+            <p>
+                Produces a true output when all required inputs
+                are true.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>OR</h3>
+            <p>
+                Produces a true output when at least one required
+                input is true.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>NOT</h3>
+            <p>
+                Produces the opposite logical state of its input.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="code-box">
+BINARY INPUT
+      ↓
+LOGIC GATES
+      ↓
+DIGITAL CIRCUIT
+      ↓
+PROCESSING
+      ↓
+OUTPUT
+    </div>
+
+</section>
+
+
+<!-- MICROCONTROLLERS -->
+
+<section>
+
+    <h2 class="section-title">
+        Microcontrollers & Embedded Systems
+    </h2>
+
+    <p class="intro">
+        Microcontrollers combine processing, memory and input/output
+        capabilities in compact chips designed to control electronic
+        systems.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Microcontroller</h3>
+            <p>
+                A small computer integrated into a chip for controlling
+                electronic devices.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sensors</h3>
+            <p>
+                Sensors measure physical quantities such as temperature,
+                light, motion, pressure or distance.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Actuators</h3>
+            <p>
+                Actuators convert electrical control signals into
+                physical actions such as movement.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SENSORS -->
+
+<section>
+
+    <h2 class="section-title">
+        Sensors & Measurement
+    </h2>
+
+    <p class="intro">
+        Sensors allow electronic systems to observe physical
+        environments and convert measurements into electrical signals.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Temperature</h3>
+            <p>
+                Temperature sensors can measure changes in thermal
+                conditions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Light</h3>
+            <p>
+                Light sensors can detect the intensity or presence
+                of electromagnetic radiation.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Motion</h3>
+            <p>
+                Motion sensors can detect movement, acceleration
+                or changes in orientation.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMMUNICATION -->
+
+<section>
+
+    <h2 class="section-title">
+        Electronics & Communication
+    </h2>
+
+    <p class="intro">
+        Electronic systems make modern communication possible by
+        generating, processing, transmitting and receiving signals.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Radio</h3>
+            <p>
+                Radio systems use electromagnetic waves to transmit
+                information through space.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Fiber Optics</h3>
+            <p>
+                Fiber-optic systems transmit information using
+                pulses of light through optical fibers.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Wireless Systems</h3>
+            <p>
+                Wireless electronics allow devices to exchange
+                information without physical communication cables.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ELECTRONICS + AI -->
+
+<section>
+
+    <h2 class="section-title">
+        Electronics & AI
+    </h2>
+
+    <p class="intro">
+        Modern AI systems depend on electronics for sensing,
+        computation, communication and control.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>AI Hardware</h3>
+            <p>
+                Specialized processors can accelerate machine-learning
+                computations.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Edge AI</h3>
+            <p>
+                AI models can run directly on electronic devices
+                instead of relying entirely on remote servers.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Smart Devices</h3>
+            <p>
+                Sensors, processors and communication hardware allow
+                electronic devices to become increasingly intelligent.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APPLICATIONS -->
+
+<section>
+
+    <h2 class="section-title">
+        Applications of Electronics
+    </h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Consumer Devices</h3>
+            <p>
+                Smartphones, computers, televisions and wearable
+                devices rely on complex electronic systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Automobiles</h3>
+            <p>
+                Modern vehicles use electronics for sensing,
+                communication, control and entertainment.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Healthcare</h3>
+            <p>
+                Electronic instruments support monitoring,
+                measurement, imaging and medical research.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Space Technology</h3>
+            <p>
+                Spacecraft use electronics for communication,
+                navigation, scientific instruments and control.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Robotics</h3>
+            <p>
+                Robots depend on electronic sensors, controllers,
+                communication systems and motor control.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Industrial Systems</h3>
+            <p>
+                Electronics enable automation, measurement,
+                monitoring and machine control.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FUTURE -->
+
+<section>
+
+    <h2 class="section-title">
+        The Future of Electronics
+    </h2>
+
+    <p class="intro">
+        Electronics continues to advance toward smaller components,
+        faster processors, lower power consumption and increasingly
+        intelligent connected systems.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Flexible Electronics</h3>
+            <p>
+                Flexible electronic materials may enable devices
+                that can bend or conform to different surfaces.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Neuromorphic Computing</h3>
+            <p>
+                Neuromorphic systems explore hardware architectures
+                inspired by aspects of biological neural systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Advanced Semiconductors</h3>
+            <p>
+                New semiconductor technologies aim to improve
+                performance, efficiency and specialized computing.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FACT -->
+
+<section>
+
+    <div class="fact">
+
+        <strong>QENOAIX. FACT</strong>
+
+        <p>
+            Modern electronic devices can contain billions of
+            microscopic transistors working together on a single
+            integrated circuit.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    QENOAIX. — Research & Development
+
+</footer>
+
+</body>
+  </html>
