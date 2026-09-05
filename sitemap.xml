@@ -24,8 +24,15 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    
     <url>
   <loc>https://qenoaix.github.io/machine-learning.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+    <url>
+  <loc>https://qenoaix.github.io/generative-ai.html</loc>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
