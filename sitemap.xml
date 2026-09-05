@@ -55,4 +55,10 @@
     <priority>0.8</priority>
 </url>
 
+    <url>
+    <loc>https://qenoaix.github.io/future-technology.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+</url>
+
 </urlset>
