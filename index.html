@@ -126,6 +126,18 @@ nav{
 .card-number{font:10px "DM Mono",monospace;color:var(--yellow)}
 .card h3{font-size:34px;margin:9px 0 5px;letter-spacing:-.04em}
 .card p{font-size:13px;color:#c3c7c2;line-height:1.55;max-width:430px}
+    @media(max-width:700px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card:nth-child(1),
+    .card:nth-child(2),
+    .card:nth-child(3),
+    .card:nth-child(4){
+        grid-column:span 1;
+    }
+    }
 
 /* CONTACT */
 .contact-section{background:var(--yellow);color:var(--black);max-width:none}
