@@ -91,7 +91,12 @@ nav{
 .gallery-section .title em{color:var(--green2)}
 .gallery-intro{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:70px}
 .gallery-intro .lead{color:#626962;max-width:420px}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    gap:16px;
+    width:100%;
+}
 .card{position:relative;min-height:420px;overflow:hidden;color:white;background:var(--black)}
 .card:nth-child(1),
 .card:nth-child(2),
