@@ -43,4 +43,10 @@
   <priority>0.8</priority>
 </url>
 
+    <url>
+  <loc>https://qenoaix.github.io/computer-science.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
 </urlset>
