@@ -85,53 +85,427 @@ nav{
 .visual-label{position:absolute;left:28px;bottom:26px;font:10px "DM Mono",monospace;line-height:1.7;letter-spacing:.12em;color:#dfe4de}
 
 /* GALLERY */
-.gallery-section{background:var(--cream);color:var(--black);max-width:none}
-.gallery-inner{max-width:var(--max);margin:auto}
-.gallery-section .tag{color:var(--green2)}
-.gallery-section .title em{color:var(--green2)}
-.gallery-intro{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:70px}
-.gallery-intro .lead{color:#626962;max-width:420px}
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallery-section{
+    background:var(--cream);
+    color:var(--black);
+    max-width:none;
+}
+
+.gallery-inner{
+    max-width:var(--max);
+    margin:auto;
+}
+
+.gallery-section .tag{
+    color:var(--green2);
+}
+
+.gallery-section .title em{
+    color:var(--green2);
+}
+
+.gallery-intro{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    align-items:end;
+    margin-bottom:70px;
+}
+
+.gallery-intro .lead{
+    color:#626962;
+    max-width:420px;
+}
+
+
+/* =========================================================
+   GALLERY GRID — 2 × 2
+   ========================================================= */
+
 .grid{
     display:grid;
-    grid-template-columns:repeat(12,minmax(0,1fr));
+    grid-template-columns:repeat(2,minmax(0,1fr));
     gap:16px;
     width:100%;
 }
-.card{position:relative;min-height:420px;overflow:hidden;color:white;background:var(--black)}
+
+
+/* =========================================================
+   GALLERY CARDS — PERFECT SQUARES
+   ========================================================= */
+
 .card{
     position:relative;
-    min-height:420px;
     width:100%;
-    min-width:0;
+    aspect-ratio:1 / 1;
+    min-height:0;
     overflow:hidden;
     color:white;
     background:var(--black);
     box-sizing:border-box;
 }
-.art{height:100%;position:absolute;inset:0;transition:transform .7s}
-.card:hover .art{transform:scale(1.06)}
-.card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.9))}
-.space{background:radial-gradient(circle at 30% 35%,#fff 0 1px,transparent 2px),radial-gradient(circle at 75% 25%,#f3df86 0 2px,transparent 3px),radial-gradient(circle at 80% 75%,#fff 0 1px,transparent 2px),linear-gradient(135deg,#06140f,#154d3b)}
-.space:after{content:"";position:absolute;width:190px;height:190px;border:1px solid rgba(243,223,134,.8);border-radius:50%;left:35%;top:24%;box-shadow:0 0 0 30px rgba(243,223,134,.035)}
-.ai{background:linear-gradient(135deg,#0e382c,#07100d)}
-.ai:before{content:"";position:absolute;inset:55px;background:linear-gradient(90deg,transparent 48%,rgba(243,223,134,.45) 49% 51%,transparent 52%),linear-gradient(0deg,transparent 48%,rgba(243,223,134,.45) 49% 51%,transparent 52%);background-size:55px 55px;transform:perspective(350px) rotateX(58deg)}
-.ai:after{content:"AI";position:absolute;inset:0;display:grid;place-items:center;font-size:120px;font-weight:800;letter-spacing:-.1em;color:rgba(243,223,134,.13)}
-.electronics{background:#dce0d9}
-.electronics:before{content:"";position:absolute;width:70%;height:2px;left:15%;top:30%;background:var(--green);box-shadow:0 90px var(--green),0 180px var(--green)}
-.electronics:after{content:"";position:absolute;width:115px;height:115px;border:5px solid var(--black);left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:inset 0 0 0 15px var(--yellow)}
-.machine{background:var(--yellow)}
-.machine:before{content:"";position:absolute;width:190px;height:190px;border:18px dotted var(--green);border-radius:50%;left:50%;top:43%;transform:translate(-50%,-50%);animation:spin 12s linear infinite}
-.machine:after{content:"";position:absolute;width:80px;height:80px;border:5px solid var(--black);border-radius:50%;left:50%;top:43%;transform:translate(-50%,-50%)}
-@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
-.card-info{position:absolute;z-index:3;left:26px;right:26px;bottom:24px}
-.card-number{font:10px "DM Mono",monospace;color:var(--yellow)}
-.card h3{font-size:34px;margin:9px 0 5px;letter-spacing:-.04em}
-.card p{font-size:13px;color:#c3c7c2;line-height:1.55;max-width:430px}
-@media(max-width:700px){
-    .grid{
-        grid-template-columns:1fr;
+
+
+/* Make sure every card occupies the same grid space */
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4){
+    grid-column:auto;
+}
+
+
+/* =========================================================
+   CARD ART
+   ========================================================= */
+
+.art{
+    height:100%;
+    width:100%;
+    position:absolute;
+    inset:0;
+    transition:transform .7s;
+}
+
+.card:hover .art{
+    transform:scale(1.06);
+}
+
+
+/* =========================================================
+   CARD OVERLAY
+   ========================================================= */
+
+.card:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.9)
+    );
+}
+
+
+/* =========================================================
+   ASTRONOMY
+   ========================================================= */
+
+.space{
+    background:
+        radial-gradient(
+            circle at 30% 35%,
+            #fff 0 1px,
+            transparent 2px
+        ),
+        radial-gradient(
+            circle at 75% 25%,
+            #f3df86 0 2px,
+            transparent 3px
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            #fff 0 1px,
+            transparent 2px
+        ),
+        linear-gradient(
+            135deg,
+            #06140f,
+            #154d3b
+        );
+}
+
+.space:after{
+    content:"";
+    position:absolute;
+    width:190px;
+    height:190px;
+    border:1px solid rgba(243,223,134,.8);
+    border-radius:50%;
+    left:35%;
+    top:24%;
+    box-shadow:
+        0 0 0 30px
+        rgba(243,223,134,.035);
+}
+
+
+/* =========================================================
+   AI / ML
+   ========================================================= */
+
+.ai{
+    background:
+        linear-gradient(
+            135deg,
+            #0e382c,
+            #07100d
+        );
+}
+
+.ai:before{
+    content:"";
+    position:absolute;
+    inset:55px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 48%,
+            rgba(243,223,134,.45) 49% 51%,
+            transparent 52%
+        ),
+        linear-gradient(
+            0deg,
+            transparent 48%,
+            rgba(243,223,134,.45) 49% 51%,
+            transparent 52%
+        );
+
+    background-size:55px 55px;
+
+    transform:
+        perspective(350px)
+        rotateX(58deg);
+}
+
+.ai:after{
+    content:"AI";
+    position:absolute;
+    inset:0;
+    display:grid;
+    place-items:center;
+    font-size:120px;
+    font-weight:800;
+    letter-spacing:-.1em;
+    color:rgba(243,223,134,.13);
+}
+
+
+/* =========================================================
+   ELECTRONICS
+   ========================================================= */
+
+.electronics{
+    background:#dce0d9;
+}
+
+.electronics:before{
+    content:"";
+    position:absolute;
+    width:70%;
+    height:2px;
+    left:15%;
+    top:30%;
+    background:var(--green);
+
+    box-shadow:
+        0 90px var(--green),
+        0 180px var(--green);
+}
+
+.electronics:after{
+    content:"";
+    position:absolute;
+    width:115px;
+    height:115px;
+    border:5px solid var(--black);
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+
+    box-shadow:
+        inset 0 0 0 15px var(--yellow);
+}
+
+
+/* =========================================================
+   MACHINES
+   ========================================================= */
+
+.machine{
+    background:var(--yellow);
+}
+
+.machine:before{
+    content:"";
+    position:absolute;
+    width:190px;
+    height:190px;
+    border:18px dotted var(--green);
+    border-radius:50%;
+    left:50%;
+    top:43%;
+
+    transform:
+        translate(-50%,-50%);
+
+    animation:
+        spin 12s linear infinite;
+}
+
+.machine:after{
+    content:"";
+    position:absolute;
+    width:80px;
+    height:80px;
+    border:5px solid var(--black);
+    border-radius:50%;
+    left:50%;
+    top:43%;
+
+    transform:
+        translate(-50%,-50%);
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes spin{
+    to{
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
     }
 }
+
+
+/* =========================================================
+   CARD INFORMATION
+   ========================================================= */
+
+.card-info{
+    position:absolute;
+    z-index:3;
+    left:26px;
+    right:26px;
+    bottom:24px;
+}
+
+.card-number{
+    font:
+        10px "DM Mono",
+        monospace;
+
+    color:var(--yellow);
+}
+
+.card h3{
+    font-size:34px;
+    margin:9px 0 5px;
+    letter-spacing:-.04em;
+}
+
+.card p{
+    font-size:13px;
+    color:#c3c7c2;
+    line-height:1.55;
+    max-width:430px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:900px){
+
+    .gallery-intro{
+        gap:30px;
+    }
+
+    .grid{
+        gap:14px;
+    }
+
+    .card h3{
+        font-size:30px;
+    }
+
+    .card-info{
+        left:22px;
+        right:22px;
+        bottom:20px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:700px){
+
+    .gallery-intro{
+        display:block;
+        margin-bottom:45px;
+    }
+
+    .gallery-intro .lead{
+        margin-top:20px;
+        max-width:100%;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .card{
+        aspect-ratio:1 / 1;
+    }
+
+    .card h3{
+        font-size:28px;
+    }
+
+    .card p{
+        font-size:12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media(max-width:480px){
+
+    .card-info{
+        left:20px;
+        right:20px;
+        bottom:18px;
+    }
+
+    .card h3{
+        font-size:25px;
+    }
+
+    .card p{
+        font-size:12px;
+    }
+
+    .ai:after{
+        font-size:90px;
+    }
+
+    .space:after{
+        width:150px;
+        height:150px;
+    }
+
+    .machine:before{
+        width:150px;
+        height:150px;
+    }
+            }
 
 /* CONTACT */
 .contact-section{background:var(--yellow);color:var(--black);max-width:none}
