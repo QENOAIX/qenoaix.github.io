@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projects & Experiments — QENOAIX.</title>
+
+<meta name="description" content="QENOAIX Projects & Experiments — research, prototypes, engineering projects, scientific experiments, AI, electronics, robotics, software and astronomy.">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#07110d;
+    color:#edf5df;
+    font-family:Arial,sans-serif;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =========================
+   NAV
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 5%;
+
+    background:rgba(7,17,13,.92);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid #294532;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.nav-link{
+    color:#b6ff45;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    max-width:1150px;
+    margin:auto;
+
+    padding:110px 5% 100px;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    top:-200px;
+    right:-150px;
+
+    background:radial-gradient(
+        circle,
+        rgba(182,255,69,.15),
+        transparent 70%
+    );
+
+    pointer-events:none;
+}
+
+.tag{
+    color:#b6ff45;
+
+    font-size:13px;
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(55px,9vw,105px);
+
+    line-height:.94;
+
+    letter-spacing:-4px;
+
+    margin-bottom:30px;
+}
+
+.hero h1 em{
+    color:#b6ff45;
+    font-style:normal;
+}
+
+.intro{
+    max-width:780px;
+
+    color:#aeb9af;
+
+    font-size:19px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:90px 5%;
+}
+
+.section-inner{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    font-size:clamp(34px,5vw,58px);
+
+    line-height:1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:20px;
+}
+
+.section-title em{
+    color:#b6ff45;
+    font-style:normal;
+}
+
+.section-intro{
+    max-width:760px;
+
+    color:#9da99f;
+
+    margin-bottom:50px;
+}
+
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
+.card-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.card{
+    background:#0c1b14;
+
+    border:1px solid #294532;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    transition:.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+
+    border-color:#b6ff45;
+}
+
+.card-number{
+    color:#b6ff45;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-size:23px;
+
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#9da99f;
+
+    font-size:15px;
+}
+
+.card-link{
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:#b6ff45;
+
+    font-size:13px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   PROJECT STATUS
+========================= */
+
+.status{
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:6px 10px;
+
+    border:1px solid #294532;
+
+    border-radius:20px;
+
+    color:#b6ff45;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   R&D PIPELINE
+========================= */
+
+.pipeline{
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:8px;
+
+    margin-top:40px;
+}
+
+.pipeline-item{
+    background:#0c1b14;
+
+    border:1px solid #294532;
+
+    padding:20px 10px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    font-size:11px;
+
+    font-weight:bold;
+}
+
+.pipeline-item span{
+    display:block;
+
+    color:#b6ff45;
+
+    font-size:20px;
+
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   RESEARCH AREAS
+========================= */
+
+.research-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.research{
+    background:#0c1b14;
+
+    border:1px solid #294532;
+
+    border-radius:18px;
+
+    padding:30px;
+}
+
+.research h3{
+    font-size:25px;
+
+    margin-bottom:10px;
+}
+
+.research h3 span{
+    color:#b6ff45;
+}
+
+.research p{
+    color:#9da99f;
+
+    margin-bottom:18px;
+}
+
+.research ul{
+    list-style:none;
+}
+
+.research li{
+    padding:8px 0;
+
+    border-bottom:1px solid #1c3024;
+
+    color:#c4cec5;
+
+    font-size:14px;
+}
+
+.research li:last-child{
+    border-bottom:none;
+}
+
+.research li::before{
+    content:"→ ";
+
+    color:#b6ff45;
+}
+
+
+/* =========================
+   EXPERIMENT RECORD
+========================= */
+
+.record{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.record-box{
+    background:#0c1b14;
+
+    border:1px solid #294532;
+
+    border-radius:18px;
+
+    padding:30px;
+}
+
+.record-box h3{
+    color:#b6ff45;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+}
+
+.record-box p{
+    color:#9da99f;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   FEATURED PROJECT
+========================= */
+
+.featured{
+    background:#0c1b14;
+
+    border:1px solid #b6ff45;
+
+    border-radius:22px;
+
+    padding:45px;
+}
+
+.featured-tag{
+    color:#b6ff45;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+.featured h3{
+    font-size:35px;
+
+    margin-bottom:15px;
+}
+
+.featured p{
+    max-width:760px;
+
+    color:#aeb9af;
+}
+
+.featured-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
+    margin-top:30px;
+}
+
+.featured-item{
+    border:1px solid #294532;
+
+    border-radius:12px;
+
+    padding:18px;
+}
+
+.featured-item strong{
+    color:#b6ff45;
+
+    display:block;
+
+    margin-bottom:5px;
+}
+
+
+/* =========================
+   FUTURE PROJECTS
+========================= */
+
+.future{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.future-item{
+    min-height:190px;
+
+    background:#0c1b14;
+
+    border:1px solid #294532;
+
+    border-radius:18px;
+
+    padding:30px;
+}
+
+.future-number{
+    color:#b6ff45;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    margin-bottom:12px;
+}
+
+.future-item h3{
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+.future-item p{
+    color:#9da99f;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   FACT
+========================= */
+
+.fact{
+    margin-top:60px;
+
+    padding:35px;
+
+    border-left:3px solid #b6ff45;
+
+    background:#0c1b14;
+}
+
+.fact strong{
+    color:#b6ff45;
+}
+
+.fact p{
+    margin-top:10px;
+
+    color:#aeb9af;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid #294532;
+
+    padding:40px 5%;
+
+    color:#77847a;
+
+    text-align:center;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .card-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .pipeline{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .future{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:18px 5%;
+    }
+
+    .hero{
+        padding:80px 5% 70px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    section{
+        padding:65px 5%;
+    }
+
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+
+    .pipeline{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .research-grid{
+        grid-template-columns:1fr;
+    }
+
+    .record{
+        grid-template-columns:1fr;
+    }
+
+    .featured{
+        padding:28px;
+    }
+
+    .featured-grid{
+        grid-template-columns:1fr;
+    }
+
+    .future{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAV
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        QENOAIX.
+    </div>
+
+    <a href="explore.html" class="nav-link">
+        ← BACK TO EXPLORE 
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="tag">
+        QENOAIX. / R&amp;D
+    </div>
+
+    <h1>
+        Projects<br>
+        &amp; <em>Experiments.</em>
+    </h1>
+
+    <p class="intro">
+        Ideas become knowledge when they are built, tested and investigated.
+        Explore QENOAIX. projects, scientific experiments, engineering
+        prototypes and experimental research across science and technology.
+    </p>
+
+</header>
+
+
+<!-- =========================
+     PROJECT AREAS
+========================= -->
+
+<section>
+
+<div class="section-inner">
+
+    <h2 class="section-title">
+        Project <em>Areas</em>
+    </h2>
+
+    <p class="section-intro">
+        A multidisciplinary collection of projects connecting science,
+        engineering, computation and experimentation.
+    </p>
+
+
+    <div class="card-grid">
+
+
+        <article class="card">
+
+            <div class="card-number">
+                01 — AI
+            </div>
+
+            <h3>
+                Artificial Intelligence
+            </h3>
+
+            <p>
+                Experiments with machine learning, intelligent systems,
+                data analysis and generative models.
+            </p>
+
+            <span class="status">
+                RESEARCH AREA
+            </span>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                02 — ELECTRONICS
+            </div>
+
+            <h3>
+                Electronics
+            </h3>
+
+            <p>
+                Circuit design, sensors, embedded systems, measurement
+                and electronic prototypes.
+            </p>
+
+            <span class="status">
+                ENGINEERING
+            </span>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                03 — ROBOTICS
+            </div>
+
+            <h3>
+                Robotics
+            </h3>
+
+            <p>
+                Investigate robots, control systems, sensing,
+                automation and intelligent machines.
+            </p>
+
+            <span class="status">
+                DEVELOPMENT
+            </span>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                04 — SOFTWARE
+            </div>
+
+            <h3>
+                Software
+            </h3>
+
+            <p>
+                Programming projects, algorithms, simulations,
+                websites and computational tools.
+            </p>
+
+            <span class="status">
+                BUILD
+            </span>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                05 — PHYSICS
+            </div>
+
+            <h3>
+                Physics
+            </h3>
+
+            <p>
+                Experimental investigations into motion, energy,
+                waves, electricity, optics and other physical systems.
+            </p>
+
+            <span class="status">
+                EXPERIMENT
+            </span>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                06 — ASTRONOMY
+            </div>
+
+            <h3>
+                Astronomy
+            </h3>
+
+            <p>
+                Explore celestial objects, astronomical data,
+                simulations and observations of the universe.
+            </p>
+
+            <span class="status">
+                EXPLORATION
+            </span>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                07 — SCIENCE
+            </div>
+
+            <h3>
+                Scientific Experiments
+            </h3>
+
+            <p>
+                Test hypotheses, collect measurements and investigate
+                scientific phenomena.
+            </p>
+
+            <span class="status">
+                EXPERIMENT
+            </span>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                08 — ENGINEERING
+            </div>
+
+            <h3>
+                Engineering
+            </h3>
+
+            <p>
+                Design systems and prototypes that solve practical
+                technical problems.
+            </p>
+
+            <span class="status">
+                PROTOTYPE
+            </span>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-number">
+                09 — DATA
+            </div>
+
+            <h3>
+                Research &amp; Data
+            </h3>
+
+            <p>
+                Analyze datasets, build models, visualize information
+                and investigate patterns.
+            </p>
+
+            <span class="status">
+                ANALYSIS
+            </span>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     R&D PIPELINE
+========================= -->
+
+<section>
+
+<div class="section-inner">
+
+    <h2 class="section-title">
+        R&amp;D <em>Pipeline</em>
+    </h2>
+
+    <p class="section-intro">
+        QENOAIX. projects follow an iterative process from an initial
+        question to a tested result.
+    </p>
+
+
+    <div class="pipeline">
+
+        <div class="pipeline-item">
+            <span>01</span>
+            QUESTION
+        </div>
+
+        <div class="pipeline-item">
+            <span>02</span>
+            RESEARCH
+        </div>
+
+        <div class="pipeline-item">
+            <span>03</span>
+            DESIGN
+        </div>
+
+        <div class="pipeline-item">
+            <span>04</span>
+            BUILD
+        </div>
+
+        <div class="pipeline-item">
+            <span>05</span>
+            TEST
+        </div>
+
+        <div class="pipeline-item">
+            <span>06</span>
+            ANALYZE
+        </div>
+
+        <div class="pipeline-item">
+            <span>07</span>
+            ITERATE
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FEATURED PROJECT
+========================= -->
+
+<section>
+
+<div class="section-inner">
+
+    <div class="featured">
+
+        <div class="featured-tag">
+            FEATURED PROJECT / 001
+        </div>
+
+        <h3>
+            QENOAIX. Experimental Lab
+        </h3>
+
+        <p>
+            A central space for documenting experiments, prototypes,
+            computational investigations and engineering ideas.
+            Each project can evolve from a simple concept into a
+            complete research record.
+        </p>
+
+
+        <div class="featured-grid">
+
+            <div class="featured-item">
+                <strong>OBJECTIVE</strong>
+                Define what the project is trying to discover or build.
+            </div>
+
+            <div class="featured-item">
+                <strong>METHOD</strong>
+                Record the design, experiment or development process.
+            </div>
+
+            <div class="featured-item">
+                <strong>RESULT</strong>
+                Document observations, measurements and conclusions.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     RESEARCH DOMAINS
+========================= -->
+
+<section>
+
+<div class="section-inner">
+
+    <h2 class="section-title">
+        Research <em>Domains</em>
+    </h2>
+
+    <p class="section-intro">
+        Projects can cross multiple disciplines. The most interesting
+        systems often exist at the boundaries between fields.
+    </p>
+
+
+    <div class="research-grid">
+
+
+        <article class="research">
+
+            <h3>
+                <span>01</span> Intelligent Systems
+            </h3>
+
+            <p>
+                Combining computation, data and algorithms to create
+                systems capable of analyzing information and making decisions.
+            </p>
+
+            <ul>
+                <li>Machine Learning</li>
+                <li>Computer Vision</li>
+                <li>Natural Language Processing</li>
+                <li>Generative Systems</li>
+                <li>Autonomous Systems</li>
+            </ul>
+
+        </article>
+
+
+        <article class="research">
+
+            <h3>
+                <span>02</span> Embedded Systems
+            </h3>
+
+            <p>
+                Connecting software with physical hardware to create
+                responsive electronic systems.
+            </p>
+
+            <ul>
+                <li>Microcontrollers</li>
+                <li>Sensors</li>
+                <li>Actuators</li>
+                <li>Control Systems</li>
+                <li>IoT Concepts</li>
+            </ul>
+
+        </article>
+
+
+        <article class="research">
+
+            <h3>
+                <span>03</span> Computational Science
+            </h3>
+
+            <p>
+                Using computation to model, simulate and investigate
+                scientific systems.
+            </p>
+
+            <ul>
+                <li>Numerical Methods</li>
+                <li>Scientific Programming</li>
+                <li>Simulation</li>
+                <li>Data Analysis</li>
+                <li>Visualization</li>
+            </ul>
+
+        </article>
+
+
+        <article class="research">
+
+            <h3>
+                <span>04</span> Space Science
+            </h3>
+
+            <p>
+                Investigating astronomical systems using observation,
+                mathematics, physics and computational methods.
+            </p>
+
+            <ul>
+                <li>Planetary Science</li>
+                <li>Stellar Systems</li>
+                <li>Astrophysics</li>
+                <li>Orbital Mechanics</li>
+                <li>Cosmology</li>
+            </ul>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIMENT RECORD
+========================= -->
+
+<section>
+
+<div class="section-inner">
+
+    <h2 class="section-title">
+        Experiment <em>Record</em>
+    </h2>
+
+    <p class="section-intro">
+        Every experiment can be documented as a reproducible research record.
+    </p>
+
+
+    <div class="record">
+
+
+        <div class="record-box">
+
+            <h3>
+                QUESTION
+            </h3>
+
+            <p>
+                What are we trying to understand, measure or investigate?
+            </p>
+
+        </div>
+
+
+        <div class="record-box">
+
+            <h3>
+                HYPOTHESIS
+            </h3>
+
+            <p>
+                What result do we expect, and why?
+            </p>
+
+        </div>
+
+
+        <div class="record-box">
+
+            <h3>
+                SETUP
+            </h3>
+
+            <p>
+                What equipment, software, data or experimental conditions
+                are required?
+            </p>
+
+        </div>
+
+
+        <div class="record-box">
+
+            <h3>
+                METHOD
+            </h3>
+
+            <p>
+                What procedure or algorithm was used to perform the investigation?
+            </p>
+
+        </div>
+
+
+        <div class="record-box">
+
+            <h3>
+                OBSERVATIONS
+            </h3>
+
+            <p>
+                What happened during the experiment or project?
+            </p>
+
+        </div>
+
+
+        <div class="record-box">
+
+            <h3>
+                DATA
+            </h3>
+
+            <p>
+                What measurements, outputs or datasets were collected?
+            </p>
+
+        </div>
+
+
+        <div class="record-box">
+
+            <h3>
+                ANALYSIS
+            </h3>
+
+            <p>
+                What patterns, relationships or results appear in the data?
+            </p>
+
+        </div>
+
+
+        <div class="record-box">
+
+            <h3>
+                CONCLUSION
+            </h3>
+
+            <p>
+                What did the investigation reveal, and what should be
+                explored next?
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ====
