@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Internet & Web — QENOAIX.</title>
+
+<meta name="description" content="Explore how the Internet and World Wide Web work, including networks, browsers, servers, protocols, websites, web applications and modern web technologies.">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:#07110d;
+    color:#edf5df;
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.7;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 6%;
+    background:rgba(7,17,13,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #294532;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:#b6ff45;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.hero{
+    max-width:1150px;
+    margin:auto;
+    padding:120px 6% 100px;
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(182,255,69,.12),
+            transparent 35%
+        );
+}
+
+.tag{
+    color:#b6ff45;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(48px,8vw,88px);
+    line-height:1;
+    margin-bottom:30px;
+}
+
+.hero p{
+    max-width:760px;
+    color:#aeb8ae;
+    font-size:18px;
+}
+
+section{
+    max-width:1150px;
+    margin:auto;
+    padding:90px 6%;
+}
+
+.section-title{
+    font-size:42px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.intro{
+    max-width:760px;
+    color:#aeb8ae;
+    margin-bottom:45px;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#0c1b14;
+    border:1px solid #294532;
+    border-radius:18px;
+    padding:28px;
+    transition:.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#b6ff45;
+}
+
+.card h3{
+    color:#b6ff45;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.card p{
+    color:#aeb8ae;
+    font-size:15px;
+}
+
+.step{
+    display:grid;
+    grid-template-columns:70px 1fr;
+    gap:25px;
+    padding:25px 0;
+    border-bottom:1px solid #294532;
+}
+
+.step-number{
+    width:50px;
+    height:50px;
+    border:1px solid #b6ff45;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#b6ff45;
+    font-weight:700;
+}
+
+.step h3{
+    margin-bottom:7px;
+}
+
+.step p{
+    color:#aeb8ae;
+}
+
+.fact{
+    margin-top:30px;
+    padding:30px;
+    border-left:3px solid #b6ff45;
+    background:#0c1b14;
+}
+
+.fact strong{
+    color:#b6ff45;
+}
+
+.code-box{
+    margin-top:30px;
+    padding:28px;
+    background:#050b08;
+    border:1px solid #294532;
+    border-radius:14px;
+    color:#b6ff45;
+    font-family:monospace;
+    white-space:pre-line;
+}
+
+footer{
+    max-width:1150px;
+    margin:auto;
+    padding:60px 6%;
+    border-top:1px solid #294532;
+    color:#68736b;
+    font-size:13px;
+}
+
+@media(max-width:800px){
+
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    .hero{
+        padding-top:90px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:18px 5%;
+    }
+
+    nav a{
+        font-size:11px;
+    }
+
+    .step{
+        grid-template-columns:55px 1fr;
+        gap:15px;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">QENOAIX.</div>
+
+    <a href="technology.html">
+        ← TECHNOLOGY
+    </a>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="tag">
+        QENOAIX. / INTERNET & WEB
+    </div>
+
+    <h1>
+        Internet & Web.
+    </h1>
+
+    <p>
+        Explore the technology behind the Internet and the World Wide Web,
+        from computer networks and servers to browsers, websites,
+        protocols and modern web applications.
+    </p>
+
+</section>
+
+
+<!-- WHAT IS THE INTERNET? -->
+
+<section>
+
+    <h2 class="section-title">
+        What Is the Internet?
+    </h2>
+
+    <p class="intro">
+        The Internet is a global network of interconnected computer networks.
+        It allows devices around the world to exchange information using
+        standardized communication protocols.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Global Network</h3>
+            <p>
+                Billions of devices can communicate through interconnected
+                networks across the world.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Data Transfer</h3>
+            <p>
+                Information is divided into packets that travel between
+                devices through networks.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Protocols</h3>
+            <p>
+                Rules such as TCP/IP, DNS, HTTP and HTTPS allow different
+                systems to communicate reliably.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW THE INTERNET WORKS -->
+
+<section>
+
+    <h2 class="section-title">
+        How the Internet Works
+    </h2>
+
+    <p class="intro">
+        When you access a website, several systems work together to locate
+        the server, transfer data and display the requested information.
+    </p>
+
+
+    <div class="step">
+
+        <div class="step-number">01</div>
+
+        <div>
+            <h3>Device</h3>
+
+            <p>
+                Your computer, smartphone or another connected device
+                sends a request for information.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">02</div>
+
+        <div>
+            <h3>DNS</h3>
+
+            <p>
+                The Domain Name System translates a domain name into
+                an IP address that computers can use.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">03</div>
+
+        <div>
+            <h3>Network</h3>
+
+            <p>
+                Data travels through networks and routers toward
+                the destination server.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">04</div>
+
+        <div>
+            <h3>Server</h3>
+
+            <p>
+                A web server receives the request and sends the
+                required resources back to the device.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">05</div>
+
+        <div>
+            <h3>Browser</h3>
+
+            <p>
+                The browser processes HTML, CSS and JavaScript
+                to display the webpage.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTERNET PIPELINE -->
+
+<section>
+
+    <h2 class="section-title">
+        Internet Request Pipeline
+    </h2>
+
+    <p class="intro">
+        A simplified view of how a web request moves through the Internet.
+    </p>
+
+    <div class="code-box">
+DEVICE
+   ↓
+DNS
+   ↓
+NETWORK
+   ↓
+ROUTER
+   ↓
+SERVER
+   ↓
+RESPONSE
+   ↓
+WEB BROWSER
+    </div>
+
+</section>
+
+
+<!-- WORLD WIDE WEB -->
+
+<section>
+
+    <h2 class="section-title">
+        What Is the World Wide Web?
+    </h2>
+
+    <p class="intro">
+        The World Wide Web is a system of interconnected documents,
+        applications and resources that are accessed over the Internet
+        using web technologies.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Web Pages</h3>
+            <p>
+                HTML documents provide the structure and content
+                of webpages.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Websites</h3>
+            <p>
+                A website is a collection of related webpages and
+                resources available through the Web.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Web Applications</h3>
+            <p>
+                Interactive applications can run inside web browsers
+                using modern web technologies.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CORE WEB TECHNOLOGIES -->
+
+<section>
+
+    <h2 class="section-title">
+        Core Web Technologies
+    </h2>
+
+    <p class="intro">
+        Modern websites are built from several technologies that work
+        together to create structure, appearance and interaction.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>
+                HyperText Markup Language defines the structure
+                and content of a webpage.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>
+                Cascading Style Sheets control the visual appearance,
+                layout and responsive design of webpages.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>
+                JavaScript adds logic, interaction and dynamic
+                behavior to web pages.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>HTTP / HTTPS</h3>
+            <p>
+                These protocols define how browsers and servers
+                exchange web resources.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>DNS</h3>
+            <p>
+                DNS connects human-readable domain names with
+                numerical IP addresses.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>APIs</h3>
+            <p>
+                Application Programming Interfaces allow different
+                software systems to communicate and exchange data.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BROWSERS -->
+
+<section>
+
+    <h2 class="section-title">
+        Web Browsers
+    </h2>
+
+    <p class="intro">
+        A web browser is software that retrieves web resources from
+        servers and interprets them so users can interact with websites.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Request</h3>
+            <p>
+                The browser sends a request for a webpage or resource.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Receive</h3>
+            <p>
+                The browser receives HTML, CSS, JavaScript, images
+                and other resources.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Render</h3>
+            <p>
+                The browser processes the resources and constructs
+                the visible webpage.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVERS -->
+
+<section>
+
+    <h2 class="section-title">
+        Web Servers
+    </h2>
+
+    <p class="intro">
+        A web server is a computer system and software environment
+        responsible for receiving requests and delivering web resources.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Static Content</h3>
+            <p>
+                Files such as HTML, CSS, JavaScript and images can
+                be delivered directly to visitors.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Dynamic Content</h3>
+            <p>
+                Server-side programs can generate customized responses
+                based on requests and data.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Databases</h3>
+            <p>
+                Servers can communicate with databases to store,
+                retrieve and process information.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WEB DEVELOPMENT -->
+
+<section>
+
+    <h2 class="section-title">
+        Web Development
+    </h2>
+
+    <p class="intro">
+        Web development combines programming, design, networking
+        and software engineering to build websites and web applications.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Frontend</h3>
+            <p>
+                The part of a website that runs in the user's browser
+                and handles the interface.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Backend</h3>
+            <p>
+                Server-side software handles application logic,
+                authentication, databases and APIs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Full Stack</h3>
+            <p>
+                Full-stack development combines frontend and backend
+                technologies into complete web applications.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MODERN WEB -->
+
+<section>
+
+    <h2 class="section-title">
+        Modern Web Technologies
+    </h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Cloud Computing</h3>
+            <p>
+                Websites and applications can use distributed
+                computing resources hosted in data centers.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Web APIs</h3>
+            <p>
+                APIs allow websites and applications to exchange
+                structured data with other services.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Progressive Web Apps</h3>
+            <p>
+                Web applications can provide app-like experiences
+                while remaining accessible through browsers.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>WebSockets</h3>
+            <p>
+                WebSockets allow persistent two-way communication
+                between a browser and a server.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>CDNs</h3>
+            <p>
+                Content Delivery Networks distribute resources
+                closer to users to improve delivery performance.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Web Security</h3>
+            <p>
+                Encryption, authentication and secure development
+                practices help protect web applications and users.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTERNET + AI -->
+
+<section>
+
+    <h2 class="section-title">
+        Internet & AI
+    </h2>
+
+    <p class="intro">
+        The Internet provides the infrastructure through which modern
+        AI systems can deliver models, data, APIs and intelligent services.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>AI APIs</h3>
+            <p>
+                Applications can communicate with AI models through
+                network-based APIs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud AI</h3>
+            <p>
+                Large AI models can run on powerful remote computing
+                systems and be accessed through the Internet.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Intelligent Web</h3>
+            <p>
+                AI can make search, recommendations, assistants and
+                other web applications more adaptive and useful.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FUTURE -->
+
+<section>
+
+    <h2 class="section-title">
+        The Future of the Web
+    </h2>
+
+    <p class="intro">
+        The Web continues to evolve through advances in AI,
+        distributed computing, immersive interfaces, connectivity
+        and new ways of interacting with digital information.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>AI-Powered Web</h3>
+            <p>
+                Intelligent systems can help users search,
+                create and interact with information.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Faster Connectivity</h3>
+            <p>
+                New networking technologies continue to improve
+                speed, reliability and global connectivity.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Immersive Experiences</h3>
+            <p>
+                3D environments, spatial computing and interactive
+                interfaces may expand how people use the Web.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FACT -->
+
+<section>
+
+    <div class="fact">
+
+        <strong>QENOAIX. FACT</strong>
+
+        <p>
+            The Internet and the World Wide Web are not the same thing:
+            the Internet is the global network infrastructure, while
+            the Web is one of the services that operates on it.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    QENOAIX. — Research & Development
+
+</footer>
+
+
+</body>
+  </html>
