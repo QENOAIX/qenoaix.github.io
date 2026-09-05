@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Data in Machine Learning — QENOAIX.</title>
+
+  <meta name="description" content="Explore the role of data in Machine Learning, including data collection, preprocessing, features, labels, training, validation and testing.">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #111311;
+      --cream: #f2f0e8;
+      --green: #8fcf9a;
+      --green2: #6fbd7d;
+      --gray: #a4aaa4;
+      --line: #303530;
+      --max: 1200px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      width: 100%;
+      padding: 25px 6vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .back {
+      color: var(--green);
+      font-size: 14px;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: var(--max);
+      margin: auto;
+      padding: 110px 6vw 90px;
+    }
+
+    .tag {
+      color: var(--green);
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(50px, 8vw, 100px);
+      line-height: 0.95;
+      font-weight: 500;
+      max-width: 1000px;
+    }
+
+    h1 em {
+      color: var(--green);
+      font-style: normal;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: var(--gray);
+      font-size: 19px;
+      margin-top: 35px;
+    }
+
+    /* CONTENT */
+
+    .content {
+      max-width: var(--max);
+      margin: auto;
+      padding: 20px 6vw 120px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .card {
+      background: var(--black);
+      padding: 45px;
+      min-height: 280px;
+    }
+
+    .number {
+      color: var(--green);
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin: 25px 0 15px;
+    }
+
+    .card p {
+      color: var(--gray);
+      font-size: 16px;
+      max-width: 500px;
+    }
+
+    /* FLOW */
+
+    .flow-section {
+      margin-top: 80px;
+    }
+
+    .flow-title {
+      color: var(--green);
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .flow {
+      border: 1px solid var(--line);
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .flow-box {
+      border: 1px solid var(--line);
+      padding: 14px 18px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .arrow {
+      color: var(--green);
+      font-size: 22px;
+    }
+
+    /* TAKEAWAY */
+
+    .takeaway {
+      margin-top: 80px;
+      border-left: 3px solid var(--green);
+      padding: 30px;
+      background: #171a17;
+    }
+
+    .takeaway h2 {
+      margin-top: 0;
+    }
+
+    .takeaway p {
+      color: var(--gray);
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 35px 6vw;
+      text-align: center;
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      .hero {
+        padding-top: 80px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 30px;
+      }
+
+      .flow {
+        justify-content: flex-start;
+      }
+
+      .arrow {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <a href="index.html" class="logo">QENOAIX.</a>
+
+    <a href="ai-technology.html" class="back">
+      ← AI & Technology
+    </a>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="tag">DATA — MACHINE LEARNING</div>
+
+    <h1>
+      Data is the <em>foundation</em> of Machine Learning.
+    </h1>
+
+    <p class="intro">
+      Machine Learning systems learn patterns from data.
+      The quality, quantity and preparation of that data can
+      strongly influence how well a model performs.
+    </p>
+
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+
+  <main class="content">
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="number">01 — COLLECTION</div>
+
+        <h2>Data Collection</h2>
+
+        <p>
+          Data can be collected from databases, sensors,
+          applications, experiments, websites, APIs and
+          many other sources.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="number">02 — TYPES</div>
+
+        <h2>Types of Data</h2>
+
+        <p>
+          Machine Learning can work with numerical data,
+          categorical data, text, images, audio, video and
+          time-series data.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="number">03 — PREPARATION</div>
+
+        <h2>Data Preprocessing</h2>
+
+        <p>
+          Raw data often needs to be cleaned and transformed.
+          Missing values, duplicate records and inconsistent
+          formats can be handled before training.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="number">04 — FEATURES</div>
+
+        <h2>Features & Labels</h2>
+
+        <p>
+          Features are input variables used by a model.
+          A label is the target output that the model is
+          trained to predict in supervised learning.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="number">05 — TRAINING</div>
+
+        <h2>Training Data</h2>
+
+        <p>
+          Training data is used by a Machine Learning
+          algorithm to learn relationships and patterns
+          from examples.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="number">06 — TESTING</div>
+
+        <h2>Test Data</h2>
+
+        <p>
+          Test data contains examples that the model has
+          not used during training. It helps evaluate how
+          well the model generalizes to unseen data.
+        </p>
+      </article>
+
+    </div>
+
+
+    <!-- ML DATA FLOW -->
+
+    <section class="flow-section">
+
+      <div class="flow-title">
+        THE MACHINE LEARNING DATA PIPELINE
+      </div>
+
+      <div class="flow">
+
+        <div class="flow-box">RAW DATA</div>
+
+        <div class="arrow">→</div>
+
+        <div class="flow-box">CLEANING</div>
+
+        <div class="arrow">→</div>
+
+        <div class="flow-box">PREPROCESSING</div>
+
+        <div class="arrow">→</div>
+
+        <div class="flow-box">TRAINING</div>
+
+        <div class="arrow">→</div>
+
+        <div class="flow-box">MODEL</div>
+
+        <div class="arrow">→</div>
+
+        <div class="flow-box">PREDICTION</div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TAKEAWAY -->
+
+    <section class="takeaway">
+
+      <h2>Key Idea</h2>
+
+      <p>
+        A Machine Learning model is only as useful as the
+        data and process used to train and evaluate it.
+        Good data helps models learn meaningful patterns
+        and make more reliable predictions.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 QENOAIX. — Research & Development
+  </footer>
+
+</body>
+</html>
