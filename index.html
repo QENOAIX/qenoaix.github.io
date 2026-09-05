@@ -98,13 +98,14 @@ nav{
     width:100%;
 }
 .card{position:relative;min-height:420px;overflow:hidden;color:white;background:var(--black)}
-.card:nth-child(1),
-.card:nth-child(2),
-.card:nth-child(3),
-.card:nth-child(4){
-    grid-column:span 6;
+.card{
+    position:relative;
+    min-height:420px;
     width:100%;
     min-width:0;
+    overflow:hidden;
+    color:white;
+    background:var(--black);
     box-sizing:border-box;
 }
 .art{height:100%;position:absolute;inset:0;transition:transform .7s}
