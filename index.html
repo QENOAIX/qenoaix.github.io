@@ -626,6 +626,52 @@ footer a{color:var(--yellow)}
     margin-right: 0 !important;
   }
     }
+
+    /* ===== MOBILE GALLERY CARD FIX ===== */
+
+.card-link{
+  display:block;
+  width:100%;
+  min-width:0;
+  text-decoration:none;
+  color:inherit;
+}
+
+.card-link .card{
+  width:100%;
+}
+
+@media (max-width:800px){
+
+  .grid{
+    width:100%;
+    grid-template-columns:1fr !important;
+    gap:16px;
+  }
+
+  .card,
+  .card-link{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+  }
+
+  .card{
+    aspect-ratio:auto !important;
+    height:390px !important;
+    min-height:390px !important;
+  }
+
+  .card-link .card{
+    height:390px !important;
+  }
+
+  .art{
+    width:100%;
+    height:100%;
+  }
+
+}
     
 </style>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
