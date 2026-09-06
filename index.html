@@ -80,7 +80,23 @@ nav{
  height:78px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;
  background:rgba(8,10,9,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)
 }
-.logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.12em;font-size:14px}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  letter-spacing:.12em;
+  font-size:14px;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+
+.logo:visited,
+.logo:hover,
+.logo:active{
+  color:#fff !important;
+  text-decoration:none !important;
+}
 .logo img{width:40px;height:40px;object-fit:contain;filter:invert(1);}
 .links{display:flex;align-items:center;gap:34px;font:12px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
 .links a{opacity:.72;transition:.25s}
