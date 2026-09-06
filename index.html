@@ -604,32 +604,19 @@ footer a{color:var(--yellow)}
 @media(prefers-reduced-motion:reduce){
  *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
-    /* ===== MOBILE FULL SCREEN WIDTH FIX ===== */
-
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-@media (max-width: 800px) {
-
+    @media (max-width: 800px) {
   html,
   body {
     width: 100% !important;
+    min-width: 100% !important;
     max-width: 100% !important;
-    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
   }
 
   nav,
   .hero,
-  .section,
   .gallery-section,
   .contact-section,
   footer {
@@ -638,13 +625,8 @@ body {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-
-  .gallery-section,
-  .contact-section {
-    width: 100% !important;
-  }
-
-}
+    }
+    
 </style>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
