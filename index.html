@@ -43,21 +43,6 @@ body{
   font-family:Manrope,Arial,sans-serif;
   overflow-x:hidden;
     }
-/* FULL MOBILE WIDTH FIX */
-@media(max-width:800px){
-
-  html,
-  body{
-    width:100vw !important;
-    min-width:100vw !important;
-    max-width:100vw !important;
-  }
-
-  nav,
-  .hero{
-    width:100vw !important;
-    max-width:100vw !important;
-  }
 
 }
 a{color:inherit;text-decoration:none}
@@ -603,6 +588,47 @@ footer a{color:var(--yellow)}
 }
 @media(prefers-reduced-motion:reduce){
  *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+    /* ===== MOBILE FULL SCREEN WIDTH FIX ===== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 800px) {
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  nav,
+  .hero,
+  .section,
+  .gallery-section,
+  .contact-section,
+  footer {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .gallery-section,
+  .contact-section {
+    width: 100% !important;
+  }
+
 }
 </style>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
