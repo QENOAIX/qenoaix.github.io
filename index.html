@@ -21,9 +21,28 @@
  --gray:#9ba19b; --line:rgba(255,255,255,.12);
  --max:1280px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--cream);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  width:100%;
+  min-width:100%;
+}
+
+body{
+  width:100%;
+  min-width:100%;
+  max-width:none;
+  margin:0;
+  background:var(--black);
+  color:var(--cream);
+  font-family:Manrope,Arial,sans-serif;
+  overflow-x:hidden;
+    }
 a{color:inherit;text-decoration:none}
 button,input,textarea{font:inherit}
 ::selection{background:var(--yellow);color:var(--black)}
