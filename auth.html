@@ -1,1 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>QENOAIX. — Account</title>
+
+  <meta
+    name="description"
+    content="Login or create your QENOAIX. account."
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      background: #000;
+      color: #000;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    .auth-page {
+      width: 100%;
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+      background: #000;
+    }
+
+
+    /* =========================
+       CONTAINER
+    ========================= */
+
+    .auth-container {
+
+      width: 100%;
+      max-width: 1000px;
+
+      min-height: 620px;
+
+      display: grid;
+      grid-template-columns: 20% 80%;
+
+      background: #fff;
+
+      box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.5);
+
+    }
+
+
+    /* =========================
+       LEFT BLACK AREA
+    ========================= */
+
+    .auth-brand {
+
+      position: relative;
+
+      background: #000;
+      color: #fff;
+
+      padding: 35px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+    }
+
+
+    .brand-logo {
+
+      font-size: 22px;
+      font-weight: 800;
+
+      letter-spacing: -1px;
+
+      color: #fff;
+
+    }
+
+
+    .brand-content {
+
+      margin-top: auto;
+      margin-bottom: auto;
+
+    }
+
+
+    .brand-content h2 {
+
+      font-size: 34px;
+      line-height: 0.95;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .brand-content p {
+
+      font-size: 11px;
+      line-height: 1.7;
+
+      color: #aaa;
+
+    }
+
+
+    .brand-footer {
+
+      font-size: 9px;
+      letter-spacing: 1px;
+
+      color: #666;
+
+    }
+
+
+    /* =========================
+       CLOSE BUTTON
+    ========================= */
+
+    .close-button {
+
+      position: absolute;
+
+      top: 18px;
+      right: 18px;
+
+      width: 32px;
+      height: 32px;
+
+      border: 1px solid #444;
+
+      background: transparent;
+
+      color: #fff;
+
+      font-size: 20px;
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: 0.2s;
+
+    }
+
+
+    .close-button:hover {
+
+      background: #fff;
+      color: #000;
+
+    }
+
+
+    /* =========================
+       RIGHT WHITE AREA
+    ========================= */
+
+    .auth-content {
+
+      background: #fff;
+
+      padding: 70px 10%;
+
+      display: flex;
+      align-items: center;
+
+    }
+
+
+    .auth-box {
+
+      width: 100%;
+      max-width: 500px;
+
+      margin: auto;
+
+    }
+
+
+    /* =========================
+       HEADING
+    ========================= */
+
+    .auth-label {
+
+      display: block;
+
+      margin-bottom: 12px;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 2px;
+
+      color: #777;
+
+    }
+
+
+    .auth-title {
+
+      font-size: 44px;
+
+      line-height: 1;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 14px;
+
+      color: #000;
+
+    }
+
+
+    .auth-description {
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      color: #777;
+
+      margin-bottom: 30px;
+
+    }
+
+
+    /* =========================
+       MESSAGE
+    ========================= */
+
+    .message {
+
+      display: none;
+
+      width: 100%;
+
+      padding: 13px 14px;
+
+      margin-bottom: 20px;
+
+      background: #f3f3f3;
+
+      border-left: 3px solid #000;
+
+      font-size: 12px;
+
+      line-height: 1.5;
+
+    }
+
+
+    .message.show {
+
+      display: block;
+
+    }
+
+
+    .message.success {
+
+      border-left-color: #222;
+
+    }
+
+
+    .message.error {
+
+      border-left-color: #000;
+
+    }
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    form {
+      width: 100%;
+    }
+
+
+    .form-group {
+
+      margin-bottom: 20px;
+
+    }
+
+
+    label {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 1px;
+
+      color: #222;
+
+    }
+
+
+    input {
+
+      width: 100%;
+
+      height: 52px;
+
+      padding: 0 14px;
+
+      border: 1px solid #d5d5d5;
+
+      background: #fff;
+
+      color: #000;
+
+      outline: none;
+
+      font-family: inherit;
+
+      font-size: 13px;
+
+      border-radius: 0;
+
+      transition: 0.2s;
+
+    }
+
+
+    input:focus {
+
+      border-color: #000;
+
+    }
+
+
+    input::placeholder {
+
+      color: #aaa;
+
+    }
+
+
+    /* =========================
+       FORGOT PASSWORD
+    ========================= */
+
+    .forgot-button {
+
+      display: block;
+
+      margin:
+
+        -5px
+
+        0
+
+        20px
+
+        auto;
+
+      border: 0;
+
+      background: transparent;
+
+      color: #666;
+
+      font-size: 11px;
+
+      text-decoration: underline;
+
+      cursor: pointer;
+
+    }
+
+
+    .forgot-button:hover {
+
+      color: #000;
+
+    }
+
+
+    /* =========================
+       SUBMIT BUTTON
+    ========================= */
+
+    .submit-button {
+
+      width: 100%;
+
+      height: 54px;
+
+      border: 0;
+
+      background: #000;
+
+      color: #fff;
+
+      font-family: inherit;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: 1.5px;
+
+      cursor: pointer;
+
+      transition: 0.2s;
+
+    }
+
+
+    .submit-button:hover {
+
+      background: #222;
+
+    }
+
+
+    .submit-button:disabled {
+
+      opacity: 0.5;
+
+      cursor: not-allowed;
+
+    }
+
+
+    /* =========================
+       SWITCH
+    ========================= */
+
+    .switch-text {
+
+      text-align: center;
+
+      margin-top: 24px;
+
+      color: #777;
+
+      font-size: 12px;
+
+    }
+
+
+    .switch-button {
+
+      border: 0;
+
+      background: transparent;
+
+      color: #000;
+
+      font-family: inherit;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      text-decoration: underline;
+
+      cursor: pointer;
+
+    }
+
+
+    /* =========================
+       HIDDEN
+    ========================= */
+
+    .hidden {
+
+      display: none !important;
+
+    }
+
+
+    /* =========================
+       BACK HOME
+    ========================= */
+
+    .back-home {
+
+      display: inline-block;
+
+      margin-top: 25px;
+
+      color: #777;
+
+      font-size: 10px;
+
+      letter-spacing: 1px;
+
+      text-decoration: none;
+
+    }
+
+
+    .back-home:hover {
+
+      color: #000;
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .auth-page {
+
+        padding: 0;
+
+        min-height: 100vh;
+
+      }
+
+
+      .auth-container {
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        grid-template-columns: 1fr;
+
+        box-shadow: none;
+
+      }
+
+
+      .auth-brand {
+
+        min-height: 150px;
+
+        padding: 25px;
+
+      }
+
+
+      .brand-content {
+
+        display: none;
+
+      }
+
+
+      .brand-footer {
+
+        display: none;
+
+      }
+
+
+      .auth-content {
+
+        padding: 45px 25px;
+
+        align-items: flex-start;
+
+      }
+
+
+      .auth-title {
+
+        font-size: 36px;
+
+      }
+
+
+      .auth-description {
+
+        font-size: 12px;
+
+      }
+
+    }
+
+
+    /* =========================
+       VERY SMALL PHONES
+    ========================= */
+
+    @media (max-width: 380px) {
+
+      .auth-content {
+
+        padding:
+
+          35px
+
+          18px;
+
+      }
+
+
+      .auth-title {
+
+        font-size: 32px;
+
+      }
+
+
+      .auth-brand {
+
+        padding: 20px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="auth-page">
+
+
+    <div class="auth-container">
+
+
+      <!-- =========================
+           BLACK BRAND AREA
+      ========================= -->
+
+      <section class="auth-brand">
+
+        <button
+          type="button"
+          class="close-button"
+          id="closeButton"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+
+        <div class="brand-logo">
+          QENOAIX.
+        </div>
+
+
+        <div class="brand-content">
+
+          <h2>
+            Explore.<br>
+            Build.<br>
+            Discover.
+          </h2>
+
+
+          <p>
+            Research & Development in
+            AI, technology, electronics,
+            machines and astronomy.
+          </p>
+
+        </div>
+
+
+        <div class="brand-footer">
+          QENOAIX. — RESEARCH & DEVELOPMENT
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           WHITE AUTH AREA
+      ========================= -->
+
+      <section class="auth-content">
+
+        <div class="auth-box">
+
+
+          <!-- =====================
+               LOGIN
+          ====================== -->
+
+          <div id="loginPanel">
+
+
+            <span class="auth-label">
+              QENOAIX. ACCOUNT
+            </span>
+
+
+            <h1 class="auth-title">
+              Welcome back.
+            </h1>
+
+
+            <p class="auth-description">
+              Login to continue exploring QENOAIX.
+            </p>
+
+
+            <div
+              id="loginMessage"
+              class="message"
+            ></div>
+
+
+            <form id="loginForm">
+
+
+              <div class="form-group">
+
+                <label for="loginEmail">
+                  EMAIL
+                </label>
+
+                <input
+                  type="email"
+                  id="loginEmail"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="loginPassword">
+                  PASSWORD
+                </label>
+
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                >
+
+              </div>
+
+
+              <button
+                type="button"
+                id="forgotButton"
+                class="forgot-button"
+              >
+                Forgot password?
+              </button>
+
+
+              <button
+                type="submit"
+                id="loginButton"
+                class="submit-button"
+              >
+                LOGIN
+              </button>
+
+
+            </form>
+
+
+            <div class="switch-text">
+
+              Don't have an account?
+
+              <button
+                type="button"
+                id="showSignup"
+                class="switch-button"
+              >
+                Sign up
+              </button>
+
+            </div>
+
+
+            <a
+              href="index.html"
+              class="back-home"
+            >
+              ← BACK TO QENOAIX.
+            </a>
+
+
+          </div>
+
+
+          <!-- =====================
+               SIGN UP
+          ====================== -->
+
+          <div
+            id="signupPanel"
+            class="hidden"
+          >
+
+
+            <span class="auth-label">
+              QENOAIX. ACCOUNT
+            </span>
+
+
+            <h1 class="auth-title">
+              Create account.
+            </h1>
+
+
+            <p class="auth-description">
+              Create your QENOAIX. account.
+            </p>
+
+
+            <div
+              id="signupMessage"
+              class="message"
+            ></div>
+
+
+            <form id="signupForm">
+
+
+              <div class="form-group">
+
+                <label for="signupEmail">
+                  EMAIL
+                </label>
+
+                <input
+                  type="email"
+                  id="signupEmail"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="signupPassword">
+                  PASSWORD
+                </label>
+
+                <input
+                  type="password"
+                  id="signupPassword"
+                  placeholder="Create a password"
+                  autocomplete="new-password"
+                  minlength="6"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="signupConfirm">
+                  CONFIRM PASSWORD
+                </label>
+
+                <input
+                  type="password"
+                  id="signupConfirm"
+                  placeholder="Repeat your password"
+                  autocomplete="new-password"
+                  minlength="6"
+                  required
+                >
+
+              </div>
+
+
+              <button
+                type="submit"
+                id="signupButton"
+                class="submit-button"
+              >
+                CREATE ACCOUNT
+              </button>
+
+
+            </form>
+
+
+            <div class="switch-text">
+
+              Already have an account?
+
+              <button
+                type="button"
+                id="showLogin"
+                class="switch-button"
+              >
+                Login
+              </button>
+
+            </div>
+
+
+            <a
+              href="index.html"
+              class="back-home"
+            >
+              ← BACK TO QENOAIX.
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       SUPABASE
+  ========================= -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+  <script>
+
+    /* =================================
+       SUPABASE CONFIGURATION
+    ================================= */
+
+    const SUPABASE_URL =
+      "https://dbvqazdxzljqstycyne.supabase.co";
+
+
+    const SUPABASE_PUBLISHABLE_KEY =
+      "sb_publishable_KOpSPkVwm_kitIRHp2s5Fw_hze6i769";
+
+
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_PUBLISHABLE_KEY
+      );
+
+    /* =================================
+   ELEMENTS
+================================= */
+
+const loginPanel =
+  document.getElementById("loginPanel");
+
+const signupPanel =
+  document.getElementById("signupPanel");
+
+const loginForm =
+  document.getElementById("loginForm");
+
+const signupForm =
+  document.getElementById("signupForm");
+
+const loginMessage =
+  document.getElementById("loginMessage");
+
+const signupMessage =
+  document.getElementById("signupMessage");
+
+const loginButton =
+  document.getElementById("loginButton");
+
+const signupButton =
+  document.getElementById("signupButton");
+
+
+/* =================================
+   MESSAGE FUNCTIONS
+================================= */
+
+function showMessage(element, message, type = "error") {
+
+  element.textContent = message;
+
+  element.className =
+    "message show " + type;
+
+}
+
+
+function clearMessages() {
+
+  loginMessage.textContent = "";
+  signupMessage.textContent = "";
+
+  loginMessage.className = "message";
+  signupMessage.className = "message";
+
+}
+
+
+/* =================================
+   LOGIN → SIGN UP
+================================= */
+
+document
+  .getElementById("showSignup")
+  .addEventListener("click", function () {
+
+    loginPanel.classList.add("hidden");
+
+    signupPanel.classList.remove("hidden");
+
+    clearMessages();
+
+  });
+
+
+/* =================================
+   SIGN UP → LOGIN
+================================= */
+
+document
+  .getElementById("showLogin")
+  .addEventListener("click", function () {
+
+    signupPanel.classList.add("hidden");
+
+    loginPanel.classList.remove("hidden");
+
+    clearMessages();
+
+  });
+
+
+/* =================================
+   CLOSE / BACK TO HOME
+================================= */
+
+document
+  .getElementById("closeButton")
+  .addEventListener("click", function () {
+
+    window.location.href = "index.html";
+
+  });
+
+
+/* =================================
+   SIGN UP
+================================= */
+
+signupForm.addEventListener(
+  "submit",
+  async function (event) {
+
+    event.preventDefault();
+
+    clearMessages();
+
+
+    const email =
+      document
+        .getElementById("signupEmail")
+        .value
+        .trim();
+
+
+    const password =
+      document
+        .getElementById("signupPassword")
+        .value;
+
+
+    const confirmPassword =
+      document
+        .getElementById("signupConfirm")
+        .value;
+
+
+    /* CHECK PASSWORD */
+
+    if (password !== confirmPassword) {
+
+      showMessage(
+        signupMessage,
+        "Passwords do not match."
+      );
+
+      return;
+
+    }
+
+
+    if (password.length < 6) {
+
+      showMessage(
+        signupMessage,
+        "Password must be at least 6 characters."
+      );
+
+      return;
+
+    }
+
+
+    signupButton.disabled = true;
+
+    signupButton.textContent =
+      "CREATING ACCOUNT...";
+
+
+    try {
+
+      const {
+        data,
+        error
+      } =
+        await supabaseClient.auth.signUp({
+
+          email: email,
+
+          password: password,
+
+          options: {
+
+            emailRedirectTo:
+              window.location.origin +
+              "/auth.html"
+
+          }
+
+        });
+
+
+      if (error) {
+
+        showMessage(
+          signupMessage,
+          error.message
+        );
+
+      }
+
+      else {
+
+        showMessage(
+          signupMessage,
+          "Account created! Check your email to confirm your account.",
+          "success"
+        );
+
+        signupForm.reset();
+
+      }
+
+    }
+
+    catch (error) {
+
+      console.error(error);
+
+      showMessage(
+        signupMessage,
+        "Something went wrong. Please try again."
+      );
+
+    }
+
+
+    signupButton.disabled = false;
+
+    signupButton.textContent =
+      "CREATE ACCOUNT";
+
+  }
+);
+
+
+/* =================================
+   LOGIN
+================================= */
+
+loginForm.addEventListener(
+  "submit",
+  async function (event) {
+
+    event.preventDefault();
+
+    clearMessages();
+
+
+    const email =
+      document
+        .getElementById("loginEmail")
+        .value
+        .trim();
+
+
+    const password =
+      document
+        .getElementById("loginPassword")
+        .value;
+
+
+    loginButton.disabled = true;
+
+    loginButton.textContent =
+      "LOGGING IN...";
+
+
+    try {
+
+      const {
+        data,
+        error
+      } =
+        await supabaseClient.auth
+          .signInWithPassword({
+
+            email: email,
+
+            password: password
+
+          });
+
+
+      if (error) {
+
+        showMessage(
+          loginMessage,
+          error.message
+        );
+
+      }
+
+      else {
+
+        showMessage(
+          loginMessage,
+          "Login successful!",
+          "success"
+        );
+
+
+        console.log(
+          "Logged in:",
+          data.user.email
+        );
+
+
+        setTimeout(
+          function () {
+
+            window.location.href =
+              "index.html";
+
+          },
+          700
+        );
+
+      }
+
+    }
+
+    catch (error) {
+
+      console.error(error);
+
+      showMessage(
+        loginMessage,
+        "Unable to connect to Supabase. Please try again."
+      );
+
+    }
+
+
+    loginButton.disabled = false;
+
+    loginButton.textContent =
+      "LOGIN";
+
+  }
+);
+
+
+/* =================================
+   FORGOT PASSWORD
+================================= */
+
+document
+  .getElementById("forgotButton")
+  .addEventListener(
+    "click",
+    async function () {
+
+      clearMessages();
+
+
+      const email =
+        document
+          .getElementById("loginEmail")
+          .value
+          .trim();
+
+
+      if (!email) {
+
+        showMessage(
+          loginMessage,
+          "Enter your email address first."
+        );
+
+        return;
+
+      }
+
+
+      try {
+
+        const {
+          error
+        } =
+          await supabaseClient.auth
+            .resetPasswordForEmail(
+              email,
+              {
+
+                redirectTo:
+                  window.location.origin +
+                  "/auth.html"
+
+              }
+            );
+
+
+        if (error) {
+
+          showMessage(
+            loginMessage,
+            error.message
+          );
+
+        }
+
+        else {
+
+          showMessage(
+            loginMessage,
+            "Password reset email sent. Check your inbox.",
+            "success"
+          );
+
+        }
+
+      }
+
+      catch (error) {
+
+        console.error(error);
+
+        showMessage(
+          loginMessage,
+          "Unable to send the password reset email."
+        );
+
+      }
+
+    }
+  );
+
+
+/* =================================
+   CHECK CURRENT SESSION
+================================= */
+
+async function checkSession() {
+
+  try {
+
+    const {
+      data,
+      error
+    } =
+      await supabaseClient.auth.getSession();
+
+
+    if (error) {
+
+      console.error(
+        "Session error:",
+        error
+      );
+
+      return;
+
+    }
+
+
+    if (data.session) {
+
+      console.log(
+        "Current user:",
+        data.session.user.email
+      );
+
+    }
+
+  }
+
+  catch (error) {
+
+    console.error(error);
+
+  }
+
+}
+
+
+checkSession();
+
+
+/* =================================
+   AUTH STATE LISTENER
+================================= */
+
+supabaseClient.auth.onAuthStateChange(
+  function (event, session) {
+
+    console.log(
+      "Auth event:",
+      event
+    );
+
+  }
+);
+
+    </script>
+
+</body>
+</html>
