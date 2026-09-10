@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Explore Algorithms — the step-by-step methods computers use to solve problems efficiently. Learn about sorting, searching, graphs, dynamic programming, greedy algorithms and complexity.">
+
+  <meta name="keywords"
+        content="Algorithms, Computer Science, Sorting Algorithms, Searching Algorithms, Graph Algorithms, Dynamic Programming, Big O, QENOAIX">
+
+  <meta name="author" content="QENOAIX">
+
+  <title>Algorithms — QENOAIX</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+
+    /* =========================
+       QENOAIX COLOR SYSTEM
+       ========================= */
+
+    :root {
+      --black: #080a09;
+      --green: #0e382c;
+      --green2: #174f3d;
+      --yellow: #f3df86;
+      --cream: #f5f5ef;
+      --white: #ffffff;
+      --muted: #b8c4be;
+    }
+
+
+    /* =========================
+       RESET
+       ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background: var(--green);
+
+      color: var(--cream);
+
+      line-height: 1.6;
+
+      overflow-x: hidden;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       NAVBAR
+       ========================= */
+
+    header {
+      width: 100%;
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      background: rgba(8, 10, 9, 0.94);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom:
+        1px solid rgba(243, 223, 134, 0.12);
+    }
+
+
+    .nav {
+      max-width: 1200px;
+
+      margin: auto;
+
+      padding: 18px 30px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+    }
+
+
+    .logo {
+      font-size: 25px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      color: var(--cream);
+    }
+
+
+    .logo span {
+      color: var(--yellow);
+    }
+
+
+    .back-btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 9px 16px;
+
+      border: 1px solid
+        rgba(243, 223, 134, 0.35);
+
+      border-radius: 50px;
+
+      color: var(--cream);
+
+      font-size: 14px;
+
+      transition: 0.3s ease;
+    }
+
+
+    .back-btn:hover {
+      background: var(--yellow);
+
+      color: var(--black);
+
+      border-color: var(--yellow);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+      max-width: 1200px;
+
+      min-height: 72vh;
+
+      margin: auto;
+
+      padding:
+        100px 30px
+        80px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+    }
+
+
+    .tag {
+      color: var(--yellow);
+
+      font-size: 13px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 22px;
+
+      font-weight: 600;
+    }
+
+
+    .hero h1 {
+      font-size:
+        clamp(55px, 10vw, 130px);
+
+      line-height: 0.9;
+
+      letter-spacing: -5px;
+
+      color: var(--cream);
+
+      max-width: 900px;
+
+      margin-bottom: 35px;
+    }
+
+
+    .hero h1 span {
+      color: var(--yellow);
+    }
+
+
+    .hero-text {
+      max-width: 700px;
+
+      font-size: 20px;
+
+      color: var(--muted);
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       INTRO
+       ========================= */
+
+    .intro {
+      background: var(--cream);
+
+      color: var(--black);
+
+      padding:
+        100px 30px;
+    }
+
+
+    .intro-inner {
+      max-width: 1100px;
+
+      margin: auto;
+    }
+
+
+    .section-label {
+      color: var(--green2);
+
+      font-size: 13px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      font-weight: bold;
+
+      margin-bottom: 20px;
+    }
+
+
+    .intro h2 {
+      font-size:
+        clamp(36px, 6vw, 72px);
+
+      line-height: 1;
+
+      letter-spacing: -2px;
+
+      max-width: 900px;
+
+      margin-bottom: 30px;
+    }
+
+
+    .intro p {
+      max-width: 850px;
+
+      font-size: 18px;
+
+      line-height: 1.8;
+
+      color: #34413b;
+    }
+
+
+    /* =========================
+       TOPIC SECTION
+       ========================= */
+
+    .topics {
+      padding:
+        100px 30px;
+
+      background: var(--green);
+    }
+
+
+    .topics-inner {
+      max-width: 1200px;
+
+      margin: auto;
+    }
+
+
+    .topics-header {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-end;
+
+      gap: 30px;
+
+      margin-bottom: 50px;
+    }
+
+
+    .topics-header h2 {
+      font-size:
+        clamp(40px, 6vw, 75px);
+
+      line-height: 0.95;
+
+      letter-spacing: -3px;
+    }
+
+
+    .topics-header p {
+      max-width: 400px;
+
+      color: var(--muted);
+
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       CARDS
+       ========================= */
+
+    .grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .card {
+      position: relative;
+
+      min-height: 330px;
+
+      padding: 35px;
+
+      border:
+        1px solid
+        rgba(243, 223, 134, 0.18);
+
+      border-radius: 24px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(23, 79, 61, 0.95),
+          rgba(14, 56, 44, 0.95)
+        );
+
+      overflow: hidden;
+
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+    }
+
+
+    .card:hover {
+      transform: translateY(-7px);
+
+      border-color:
+        rgba(243, 223, 134, 0.55);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(23, 79, 61, 1),
+          rgba(14, 56, 44, 1)
+        );
+    }
+
+
+    .card-number {
+      color: var(--yellow);
+
+      font-size: 12px;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 45px;
+
+      font-weight: bold;
+    }
+
+
+    .card h3 {
+      font-size: 32px;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 15px;
+
+      color: var(--cream);
+    }
+
+
+    .card p {
+      color: var(--muted);
+
+      max-width: 480px;
+
+      font-size: 16px;
+
+      line-height: 1.7;
+    }
+
+
+    .card-icon {
+      position: absolute;
+
+      right: 28px;
+
+      bottom: 22px;
+
+      font-size: 55px;
+
+      opacity: 0.13;
+
+      color: var(--yellow);
+
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       BIG O SECTION
+       ========================= */
+
+    .complexity {
+      background: var(--cream);
+
+      color: var(--black);
+
+      padding:
+        100px 30px;
+    }
+
+
+    .complexity-inner {
+      max-width: 1100px;
+
+      margin: auto;
+    }
+
+
+    .complexity h2 {
+      font-size:
+        clamp(42px, 7vw, 80px);
+
+      line-height: 0.95;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 30px;
+    }
+
+
+    .complexity-intro {
+      max-width: 750px;
+
+      font-size: 18px;
+
+      color: #46524c;
+
+      margin-bottom: 50px;
+
+      line-height: 1.8;
+    }
+
+
+    .complexity-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 15px;
+    }
+
+
+    .complexity-box {
+      border:
+        1px solid
+        rgba(14, 56, 44, 0.2);
+
+      border-radius: 18px;
+
+      padding: 28px;
+
+      background: #eeeeE6;
+
+      transition: 0.3s ease;
+    }
+
+
+    .complexity-box:hover {
+      transform: translateY(-5px);
+
+      background: var(--white);
+    }
+
+
+    .complexity-box strong {
+      display: block;
+
+      color: var(--green2);
+
+      font-size: 28px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .complexity-box span {
+      color: #59645f;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       EXAMPLE SECTION
+       ========================= */
+
+    .example {
+      background: var(--black);
+
+      padding:
+        100px 30px;
+    }
+
+
+    .example-inner {
+      max-width: 1100px;
+
+      margin: auto;
+    }
+
+
+    .example h2 {
+      font-size:
+        clamp(40px, 6vw, 70px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 25px;
+    }
+
+
+    .example-text {
+      color: var(--muted);
+
+      max-width: 750px;
+
+      font-size: 18px;
+
+      margin-bottom: 45px;
+    }
+
+
+    .algorithm-box {
+      background: var(--green);
+
+      border:
+        1px solid
+        rgba(243, 223, 134, 0.2);
+
+      border-radius: 22px;
+
+      padding: 35px;
+    }
+
+
+    .algorithm-step {
+      display: flex;
+
+      gap: 20px;
+
+      padding: 20px 0;
+
+      border-bottom:
+        1px solid
+        rgba(243, 223, 134, 0.1);
+    }
+
+
+    .algorithm-step:last-child {
+      border-bottom: none;
+    }
+
+
+    .step-number {
+      min-width: 38px;
+
+      height: 38px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--yellow);
+
+      color: var(--black);
+
+      font-weight: bold;
+    }
+
+
+    .step-content h4 {
+      color: var(--cream);
+
+      margin-bottom: 5px;
+
+      font-size: 18px;
+    }
+
+
+    .step-content p {
+      color: var(--muted);
+
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       TAKEAWAY
+       ========================= */
+
+    .takeaway {
+      background: var(--yellow);
+
+      color: var(--black);
+
+      padding:
+        100px 30px;
+    }
+
+
+    .takeaway-inner {
+      max-width: 1000px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+
+    .takeaway small {
+      display: block;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      font-weight: bold;
+
+      margin-bottom: 25px;
+    }
+
+
+    .takeaway h2 {
+      font-size:
+        clamp(32px, 5vw, 65px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      background: var(--black);
+
+      padding:
+        45px 30px;
+    }
+
+
+    .footer-inner {
+      max-width: 1200px;
+
+      margin: auto;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+
+    .footer-logo {
+      font-size: 20px;
+
+      font-weight: bold;
+
+      letter-spacing: 2px;
+    }
+
+
+    .footer-logo span {
+      color: var(--yellow);
+    }
+
+
+    .footer-text {
+      color: #7f8c86;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       SCROLL ANIMATION
+       ========================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(30px);
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+
+    .reveal.active {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav {
+        padding:
+          16px 20px;
+      }
+
+
+      .hero {
+        padding:
+          80px 20px
+          70px;
+      }
+
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+
+      .hero-text {
+        font-size: 17px;
+      }
+
+
+      .intro,
+      .topics,
+      .complexity,
+      .example,
+      .takeaway {
+        padding:
+          75px 20px;
+      }
+
+
+      .topics-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .complexity-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .card {
+        min-height: 300px;
+
+        padding: 28px;
+      }
+
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+    }
+
+
+    @media (max-width: 480px) {
+
+      .logo {
+        font-size: 20px;
+      }
+
+
+      .back-btn {
+        padding:
+          8px 12px;
+
+        font-size: 12px;
+      }
+
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+
+      .card h3 {
+        font-size: 27px;
+      }
+
+
+      .algorithm-box {
+        padding: 20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
+
+  <header>
+
+    <nav class="nav">
+
+      <a href="index.html" class="logo">
+        QENOAIX<span>.</span>
+      </a>
+
+      <a href="ai-technology.html" class="back-btn">
+        ← AI & Technology
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+       ========================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="tag">
+        04 / AI & Technology
+      </div>
+
+      <h1>
+        Algo<span>rithms</span>
+      </h1>
+
+      <p class="hero-text">
+        Step-by-step methods that help computers solve problems,
+        process information, and make decisions efficiently.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+         ========================= -->
+
+    <section class="intro">
+
+      <div class="intro-inner reveal">
+
+        <div class="section-label">
+          01 — What are Algorithms?
+        </div>
+
+        <h2>
+          Turning problems into logical steps.
+        </h2>
+
+        <p>
+          An algorithm is a finite sequence of clear instructions
+          designed to solve a problem or complete a task. Algorithms
+          are everywhere in computer science — from searching for a
+          website to organizing millions of pieces of data.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TOPICS
+         ========================= -->
+
+    <section class="topics">
+
+      <div class="topics-inner">
+
+        <div class="topics-header reveal">
+
+          <div>
+
+            <div class="tag">
+              02 — Core Concepts
+            </div>
+
+            <h2>
+              Explore<br>
+              Algorithms.
+            </h2>
+
+          </div>
+
+          <p>
+            Different problems require different strategies.
+            These fundamental algorithmic techniques form the
+            foundation of computer science.
+          </p>
+
+        </div>
+
+
+        <div class="grid">
+
+
+          <!-- SORTING -->
+
+          <article class="card reveal">
+
+            <div class="card-number">
+              01 — SORTING
+            </div>
+
+            <h3>
+              Sorting Algorithms
+            </h3>
+
+            <p>
+              Organize data into a specific order using methods
+              such as Bubble Sort, Merge Sort, Quick Sort and
+              Heap Sort.
+            </p>
+
+            <div class="card-icon">
+              ↕
+            </div>
+
+          </article>
+
+
+          <!-- SEARCHING -->
+
+          <article class="card reveal">
+
+            <div class="card-number">
+              02 — SEARCHING
+            </div>
+
+            <h3>
+              Searching Algorithms
+            </h3>
+
+            <p>
+              Find specific information within a collection of
+              data using techniques such as Linear Search and
+              Binary Search.
+            </p>
+
+            <div class="card-icon">
+              ⌕
+            </div>
+
+          </article>
+
+
+          <!-- GRAPH -->
+
+          <article class="card reveal">
+
+            <div class="card-number">
+              03 — GRAPHS
+            </div>
+
+            <h3>
+              Graph Algorithms
+            </h3>
+
+            <p>
+              Work with connected data and discover paths using
+              algorithms such as BFS, DFS and Dijkstra's Algorithm.
+            </p>
+
+            <div class="card-icon">
+              ◇
+            </div>
+
+          </article>
+
+
+          <!-- DYNAMIC -->
+
+          <article class="card reveal">
+
+            <div class="card-number">
+              04 — DYNAMIC PROGRAMMING
+            </div>
+
+            <h3>
+              Dynamic Programming
+            </h3>
+
+            <p>
+              Solve complex problems by breaking them into smaller
+              overlapping subproblems and storing previously
+              calculated results.
+            </p>
+
+            <div class="card-icon">
+              DP
+            </div>
+
+          </article>
+
+
+          <!-- GREEDY -->
+
+          <article class="card reveal">
+
+            <div class="card-number">
+              05 — GREEDY
+            </div>
+
+            <h3>
+              Greedy Algorithms
+            </h3>
+
+            <p>
+              Build a solution step-by-step by choosing what appears
+              to be the best available option at every stage.
+            </p>
+
+            <div class="card-icon">
+              →
+            </div>
+
+          </article>
+
+
+          <!-- DIVIDE -->
+
+          <article class="card reveal">
+
+            <div class="card-number">
+              06 — DIVIDE & CONQUER
+            </div>
+
+            <h3>
+              Divide & Conquer
+            </h3>
+
+            <p>
+              Split a large problem into smaller pieces, solve each
+              part independently, and combine the results into a
+              complete solution.
+            </p>
+
+            <div class="card-icon">
+              ÷
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         COMPLEXITY
+         ========================= -->
+
+    <section class="complexity">
+
+      <div class="complexity-inner reveal">
+
+        <div class="section-label">
+          03 — Algorithm Complexity
+        </div>
+
+        <h2>
+          How efficient<br>
+          is the solution?
+        </h2>
+
+        <p class="complexity-intro">
+          An algorithm may solve a problem correctly but still be
+          inefficient. Complexity analysis helps us understand how
+          the time and memory requirements of an algorithm change
+          as the input becomes larger.
+        </p>
+
+
+        <div class="complexity-grid">
+
+          <div class="complexity-box">
+
+            <strong>
+              O(1)
+            </strong>
+
+            <span>
+              Constant Time
+            </span>
+
+          </div>
+
+
+          <div class="complexity-box">
+
+            <strong>
+              O(log n)
+            </strong>
+
+            <span>
+              Logarithmic Time
+            </span>
+
+          </div>
+
+
+          <div class="complexity-box">
+
+            <strong>
+              O(n)
+            </strong>
+
+            <span>
+              Linear Time
+            </span>
+
+          </div>
+
+
+          <div class="complexity-box">
+
+            <strong>
+              O(n log n)
+            </strong>
+
+            <span>
+              Linearithmic Time
+            </span>
+
+          </div>
+
+
+          <div class="complexity-box">
+
+            <strong>
+              O(n²)
+            </strong>
+
+            <span>
+              Quadratic Time
+            </span>
+
+          </div>
+
+
+          <div class="complexity-box">
+
+            <strong>
+              O(2ⁿ)
+            </strong>
+
+            <span>
+              Exponential Time
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXAMPLE
+         ========================= -->
+
+    <section class="example">
+
+      <div class="example-inner reveal">
+
+        <div class="tag">
+          04 — Simple Example
+        </div>
+
+        <h2>
+          Finding a number.
+        </h2>
+
+        <p class="example-text">
+          Imagine you have a list of numbers and need to find
+          whether the number 42 exists. An algorithm gives the
+          computer a precise sequence of actions to follow.
+        </p>
+
+
+        <div class="algorithm-box">
+
+
+          <div class="algorithm-step">
+
+            <div class="step-number">
+              1
+            </div>
+
+            <div class="step-content">
+
+              <h4>
+                Start with the data
+              </h4>
+
+              <p>
+                Take the list of numbers that needs to be searched.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="algorithm-step">
+
+            <div class="step-number">
+              2
+            </div>
+
+            <div class="step
