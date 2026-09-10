@@ -7,15 +7,13 @@
 <title>Algorithms — QENOAIX.</title>
 
 <style>
+
 :root{
   --black:#080a09;
   --green:#0e382c;
   --green2:#174f3d;
   --yellow:#f3df86;
   --cream:#f5f5ef;
-  --muted:#626962;
-  --line:#dfe2dc;
-  --white:#ffffff;
 }
 
 *{
@@ -32,38 +30,33 @@ body{
   font-family:Arial,Helvetica,sans-serif;
   background:var(--cream);
   color:var(--black);
-  line-height:1.65;
+  line-height:1.7;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* NAVIGATION */
 
-header{
+nav{
   background:var(--black);
-  color:white;
-  padding:20px 7%;
+  padding:22px 7%;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  border-bottom:1px solid rgba(243,223,134,.18);
+  align-items:center;
 }
 
 .logo{
   color:var(--yellow);
   font-size:22px;
   font-weight:800;
-  letter-spacing:.16em;
+  letter-spacing:.15em;
 }
 
 .back{
   color:white;
   text-decoration:none;
-  font-size:10px;
-  font-family:"Courier New",monospace;
+  font-size:11px;
   letter-spacing:.08em;
-  padding:10px 15px;
   border:1px solid rgba(243,223,134,.35);
+  padding:9px 15px;
   transition:.3s;
 }
 
@@ -72,14 +65,12 @@ header{
   color:var(--black);
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
   background:var(--green);
   color:white;
-  padding:90px 7% 105px;
+  padding:90px 7% 100px;
   position:relative;
   overflow:hidden;
 }
@@ -87,30 +78,29 @@ header{
 .hero:after{
   content:"";
   position:absolute;
-  width:350px;
-  height:350px;
-  border:1px solid rgba(243,223,134,.2);
+  width:260px;
+  height:260px;
+  border:1px solid rgba(243,223,134,.3);
   border-radius:50%;
-  right:-100px;
-  bottom:-180px;
+  right:8%;
+  top:25%;
   box-shadow:
-    0 0 0 40px rgba(243,223,134,.035),
-    0 0 0 80px rgba(243,223,134,.025);
+    0 0 0 30px rgba(243,223,134,.04),
+    0 0 0 60px rgba(243,223,134,.025);
 }
 
 .tag{
   color:var(--yellow);
-  font-family:"Courier New",monospace;
+  font-family:monospace;
   font-size:10px;
   letter-spacing:.18em;
-  margin-bottom:22px;
+  margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:clamp(55px,8vw,105px);
-  line-height:.9;
-  letter-spacing:-.065em;
-  max-width:1000px;
+  font-size:clamp(55px,8vw,100px);
+  line-height:.92;
+  letter-spacing:-.06em;
   position:relative;
   z-index:2;
 }
@@ -121,71 +111,67 @@ header{
 }
 
 .hero p{
-  color:#d0d8d3;
   max-width:650px;
+  color:#cfd8d3;
   margin-top:30px;
   font-size:15px;
   position:relative;
   z-index:2;
 }
 
-/* =========================
-   MAIN
-========================= */
+/* CONTENT */
 
 .container{
   max-width:1200px;
   margin:auto;
-  padding:85px 7%;
+  padding:80px 7%;
 }
 
 section{
-  margin-bottom:90px;
+  margin-bottom:80px;
 }
 
 .section-tag{
   color:var(--green2);
-  font-family:"Courier New",monospace;
+  font-family:monospace;
   font-size:10px;
   letter-spacing:.15em;
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
 h2{
   color:var(--green);
-  font-size:clamp(34px,5vw,55px);
+  font-size:clamp(35px,5vw,55px);
   line-height:1;
-  letter-spacing:-.055em;
+  letter-spacing:-.05em;
   margin-bottom:25px;
 }
 
 h3{
   color:var(--green);
   font-size:25px;
-  letter-spacing:-.035em;
-  margin:27px 0 10px;
+  letter-spacing:-.03em;
+  margin:25px 0 10px;
 }
 
 p{
-  color:var(--muted);
+  color:#626962;
   font-size:14px;
   margin-bottom:16px;
 }
 
 ul,
 ol{
-  color:var(--muted);
+  color:#626962;
   padding-left:25px;
 }
 
 li{
-  font-size:14px;
   margin-bottom:10px;
+  font-size:14px;
 }
 
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 
 .grid{
   display:grid;
@@ -195,25 +181,10 @@ li{
 }
 
 .card{
-  background:var(--white);
-  border:1px solid var(--line);
-  padding:32px;
-  position:relative;
-  overflow:hidden;
-  transition:.35s ease;
-}
-
-.card:before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:3px;
-  background:var(--yellow);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:.35s ease;
+  background:white;
+  border:1px solid #dedfd9;
+  padding:30px;
+  transition:.35s;
 }
 
 .card:hover{
@@ -222,13 +193,9 @@ li{
   box-shadow:0 15px 35px rgba(8,10,9,.08);
 }
 
-.card:hover:before{
-  transform:scaleX(1);
-}
-
 .card-number{
   color:var(--green2);
-  font-family:"Courier New",monospace;
+  font-family:monospace;
   font-size:10px;
   letter-spacing:.13em;
 }
@@ -237,28 +204,20 @@ li{
   margin-top:9px;
 }
 
-.card p{
-  margin-bottom:0;
-}
-
-/* =========================
-   FORMULA
-========================= */
+/* FORMULA */
 
 .formula{
   background:var(--black);
   color:var(--yellow);
   border-left:4px solid var(--yellow);
-  padding:23px 27px;
-  margin:28px 0;
-  font-family:"Courier New",monospace;
+  padding:22px 25px;
+  margin:25px 0;
+  font-family:monospace;
   font-size:16px;
   overflow-x:auto;
 }
 
-/* =========================
-   NOTE
-========================= */
+/* NOTE */
 
 .note{
   background:#fffbea;
@@ -271,51 +230,45 @@ li{
   color:var(--green);
 }
 
-/* =========================
-   TABLE
-========================= */
+/* TABLE */
 
 .table-wrap{
   overflow-x:auto;
   margin-top:30px;
 }
 
-.compare{
+table{
   width:100%;
   min-width:650px;
   border-collapse:collapse;
   background:white;
 }
 
-.compare th{
+th{
   background:var(--green);
   color:white;
   text-align:left;
-  padding:15px 17px;
+  padding:15px;
   font-size:12px;
-  letter-spacing:.04em;
 }
 
-.compare td{
-  color:var(--muted);
-  border:1px solid var(--line);
-  padding:15px 17px;
+td{
+  color:#626962;
+  border:1px solid #dedfd9;
+  padding:15px;
   font-size:13px;
 }
 
-/* =========================
-   TAKEAWAY
-========================= */
+/* TAKEAWAY */
 
 .takeaway{
   background:var(--green);
-  color:white;
-  padding:35px;
   border-left:5px solid var(--yellow);
+  padding:30px;
 }
 
 .takeaway p{
-  color:#d5ddd8;
+  color:#d4ddd8;
   margin:0;
 }
 
@@ -323,28 +276,23 @@ li{
   color:var(--yellow);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
   background:var(--black);
   color:#9da59f;
   text-align:center;
-  padding:32px 20px;
-  font-family:"Courier New",monospace;
+  padding:30px;
+  font-family:monospace;
   font-size:10px;
   letter-spacing:.08em;
-  border-top:1px solid rgba(243,223,134,.18);
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:700px){
 
-  header{
+  nav{
     padding:18px 5%;
   }
 
@@ -365,16 +313,14 @@ footer{
     font-size:55px;
   }
 
-  .hero p{
-    font-size:14px;
+  .hero:after{
+    width:170px;
+    height:170px;
+    right:-60px;
   }
 
   .container{
-    padding:65px 6%;
-  }
-
-  section{
-    margin-bottom:70px;
+    padding:60px 6%;
   }
 
   .grid{
@@ -385,24 +331,16 @@ footer{
     font-size:36px;
   }
 
-  .card{
-    padding:26px;
-  }
-
-  .formula{
-    font-size:14px;
-  }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- NAV -->
 
-<header>
+<nav>
 
   <div class="logo">QENOAIX.</div>
 
@@ -410,17 +348,15 @@ footer{
     ← BACK TO AI & TECHNOLOGY
   </a>
 
-</header>
+</nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
   <div class="tag">
-    03 / AI & COMPUTER SCIENCE
+    AI / COMPUTER SCIENCE
   </div>
 
   <h1>
@@ -429,7 +365,7 @@ footer{
   </h1>
 
   <p>
-    Algorithms are step-by-step methods used to solve problems,
+    Algorithms are step-by-step procedures used to solve problems,
     process information, search through data, make decisions and
     build intelligent systems.
   </p>
@@ -437,14 +373,10 @@ footer{
 </section>
 
 
-<!-- =========================
-     MAIN CONTENT
-========================= -->
-
 <main class="container">
 
 
-<!-- WHAT IS AN ALGORITHM -->
+<!-- 01 -->
 
 <section>
 
@@ -458,7 +390,7 @@ footer{
 
   <p>
     An algorithm is a finite sequence of clear and ordered instructions
-    designed to solve a problem or perform a specific task.
+    designed to solve a problem or perform a particular task.
   </p>
 
   <p>
@@ -468,14 +400,14 @@ footer{
 
   <div class="note">
     <strong>Simple idea:</strong>
-    An algorithm is like a recipe for solving a problem. It describes
-    what steps should happen and in what order.
+    An algorithm is like a recipe for solving a problem.
+    It tells us what steps to perform and in what order.
   </div>
 
 </section>
 
 
-<!-- PROPERTIES -->
+<!-- 02 -->
 
 <section>
 
@@ -484,7 +416,7 @@ footer{
   </div>
 
   <h2>
-    Properties of a Good Algorithm
+    Properties of an Algorithm
   </h2>
 
   <div class="grid">
@@ -493,7 +425,7 @@ footer{
       <div class="card-number">01 — INPUT</div>
       <h3>Input</h3>
       <p>
-        An algorithm may receive one or more values that it needs
+        An algorithm can receive one or more values that it needs
         to process.
       </p>
     </div>
@@ -502,7 +434,8 @@ footer{
       <div class="card-number">02 — OUTPUT</div>
       <h3>Output</h3>
       <p>
-        It should produce a useful result after processing the input.
+        It should produce a meaningful result after processing
+        the input.
       </p>
     </div>
 
@@ -518,8 +451,8 @@ footer{
       <div class="card-number">04 — FINITENESS</div>
       <h3>Termination</h3>
       <p>
-        A proper algorithm should eventually finish after a finite
-        number of steps.
+        A proper algorithm should eventually finish after a
+        finite number of steps.
       </p>
     </div>
 
@@ -528,7 +461,7 @@ footer{
 </section>
 
 
-<!-- SIMPLE EXAMPLE -->
+<!-- 03 -->
 
 <section>
 
@@ -541,22 +474,27 @@ footer{
   </h2>
 
   <p>
-    Suppose we have a list of numbers and want to determine the
-    largest value.
+    Imagine we have a list of numbers and want to find the largest one.
   </p>
 
   <ol>
+
     <li>Take the first number as the current largest.</li>
+
     <li>Compare it with the next number.</li>
+
     <li>If the next number is larger, make it the new largest.</li>
+
     <li>Continue until every number has been checked.</li>
-    <li>The current largest value is the answer.</li>
+
+    <li>The current largest number is the answer.</li>
+
   </ol>
 
 </section>
 
 
-<!-- SEARCHING -->
+<!-- 04 -->
 
 <section>
 
@@ -586,7 +524,7 @@ footer{
       </p>
 
       <div class="formula">
-        O(n)
+        Time Complexity: O(n)
       </div>
 
     </div>
@@ -608,7 +546,7 @@ footer{
       </p>
 
       <div class="formula">
-        O(log n)
+        Time Complexity: O(log n)
       </div>
 
     </div>
@@ -618,7 +556,7 @@ footer{
 </section>
 
 
-<!-- SORTING -->
+<!-- 05 -->
 
 <section>
 
@@ -631,13 +569,13 @@ footer{
   </h2>
 
   <p>
-    Sorting algorithms arrange data into a particular order, such as
-    ascending or descending order.
+    Sorting algorithms arrange data into a particular order,
+    such as ascending or descending order.
   </p>
 
   <div class="table-wrap">
 
-    <table class="compare">
+    <table>
 
       <tr>
         <th>Algorithm</th>
@@ -647,7 +585,7 @@ footer{
 
       <tr>
         <td>Bubble Sort</td>
-        <td>Repeatedly compare and swap adjacent elements.</td>
+        <td>Compare and swap adjacent elements.</td>
         <td>O(n²)</td>
       </tr>
 
@@ -659,19 +597,19 @@ footer{
 
       <tr>
         <td>Insertion Sort</td>
-        <td>Insert each element into its correct position.</td>
+        <td>Insert elements into their correct position.</td>
         <td>O(n²)</td>
       </tr>
 
       <tr>
         <td>Merge Sort</td>
-        <td>Divide the data and merge sorted portions.</td>
+        <td>Divide data and merge sorted portions.</td>
         <td>O(n log n)</td>
       </tr>
 
       <tr>
         <td>Quick Sort</td>
-        <td>Partition the data around a pivot.</td>
+        <td>Partition data around a pivot.</td>
         <td>O(n log n) average</td>
       </tr>
 
@@ -682,22 +620,22 @@ footer{
 </section>
 
 
-<!-- GRAPH ALGORITHMS -->
+<!-- 06 -->
 
 <section>
 
   <div class="section-tag">
-    06 / GRAPHS
+    06 / GRAPH ALGORITHMS
   </div>
 
   <h2>
-    Graph Algorithms
+    Algorithms for Networks
   </h2>
 
   <p>
-    A graph is a mathematical structure consisting of vertices and
-    edges. Graph algorithms are used to solve problems involving
-    connections and networks.
+    Graphs represent relationships between objects using vertices
+    and edges. Graph algorithms are important in networks,
+    navigation, social platforms and computer science.
   </p>
 
   <div class="grid">
@@ -713,8 +651,7 @@ footer{
       </h3>
 
       <p>
-        BFS explores a graph level by level, starting from a selected
-        vertex.
+        BFS explores a graph level by level from a starting vertex.
       </p>
 
     </div>
@@ -731,8 +668,7 @@ footer{
       </h3>
 
       <p>
-        DFS explores as far as possible along a branch before
-        backtracking.
+        DFS explores deeply along a path before backtracking.
       </p>
 
     </div>
@@ -750,7 +686,7 @@ footer{
 
       <p>
         Dijkstra's algorithm finds shortest paths from a source
-        vertex in a graph with non-negative edge weights.
+        vertex when edge weights are non-negative.
       </p>
 
     </div>
@@ -767,8 +703,8 @@ footer{
       </h3>
 
       <p>
-        Algorithms such as Kruskal's and Prim's can construct
-        minimum spanning trees.
+        Kruskal's and Prim's algorithms can construct minimum
+        spanning trees.
       </p>
 
     </div>
@@ -778,7 +714,7 @@ footer{
 </section>
 
 
-<!-- COMPLEXITY -->
+<!-- 07 -->
 
 <section>
 
@@ -791,8 +727,8 @@ footer{
   </h2>
 
   <p>
-    Algorithm complexity describes how the resources required by an
-    algorithm change as the size of the input increases.
+    Algorithm complexity describes how the resources required by
+    an algorithm change as the size of the input increases.
   </p>
 
   <h3>
@@ -817,15 +753,10 @@ footer{
     O(1) → O(log n) → O(n) → O(n log n) → O(n²)
   </div>
 
-  <div class="note">
-    <strong>Big-O notation</strong> is commonly used to describe
-    how an algorithm scales with increasing input size.
-  </div>
-
 </section>
 
 
-<!-- AI -->
+<!-- 08 -->
 
 <section>
 
@@ -838,9 +769,9 @@ footer{
   </h2>
 
   <p>
-    Artificial intelligence depends heavily on algorithms. AI systems
-    use algorithms to learn patterns, process information, search
-    possible solutions, optimize parameters and make predictions.
+    Artificial intelligence depends heavily on algorithms.
+    AI systems use algorithms to learn patterns, process data,
+    search possible solutions and optimize their performance.
   </p>
 
   <div class="grid">
@@ -856,8 +787,8 @@ footer{
       </h3>
 
       <p>
-        Learning algorithms allow systems to discover patterns in
-        data and use those patterns to make predictions.
+        Learning algorithms allow systems to discover patterns
+        in data and make predictions.
       </p>
 
     </div>
@@ -874,8 +805,8 @@ footer{
       </h3>
 
       <p>
-        AI systems can explore possible actions or solutions to
-        find useful outcomes.
+        AI systems can explore possible actions or solutions
+        to find useful outcomes.
       </p>
 
     </div>
@@ -921,7 +852,7 @@ footer{
 </section>
 
 
-<!-- EVERYDAY LIFE -->
+<!-- 09 -->
 
 <section>
 
@@ -960,8 +891,7 @@ footer{
     </li>
 
     <li>
-      Robots use algorithms to understand their environment and
-      perform tasks.
+      Robots use algorithms for navigation and decision-making.
     </li>
 
   </ul>
@@ -969,7 +899,7 @@ footer{
 </section>
 
 
-<!-- ALGORITHM VS PROGRAM -->
+<!-- 10 -->
 
 <section>
 
@@ -988,18 +918,20 @@ footer{
   </p>
 
   <div class="note">
+
     <strong>
       Think of it this way:
     </strong>
 
     The algorithm is the plan.
     The program is the coded execution of that plan.
+
   </div>
 
 </section>
 
 
-<!-- HISTORY -->
+<!-- 11 -->
 
 <section>
 
@@ -1024,7 +956,7 @@ footer{
 </section>
 
 
-<!-- TAKEAWAY -->
+<!-- 12 -->
 
 <section>
 
@@ -1039,12 +971,15 @@ footer{
   <div class="takeaway">
 
     <p>
+
       <strong>
         Algorithms turn problems into precise computational processes.
       </strong>
+
       They provide the logical foundation behind software,
       computer science, machine learning, artificial intelligence
       and many technologies we use every day.
+
     </p>
 
   </div>
@@ -1055,11 +990,9 @@ footer{
 </main>
 
 
-<!-- FOOTER -->
-
 <footer>
   © 2026 QENOAIX.™
 </footer>
 
 </body>
-      </html>
+    </html>
