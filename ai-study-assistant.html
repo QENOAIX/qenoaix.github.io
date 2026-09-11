@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>AI Study Assistant — QENOAIX</title>
+
+  <style>
+
+    :root {
+      --black: #080a09;
+      --green: #0e382c;
+      --green2: #174f3d;
+      --yellow: #f3df86;
+      --cream: #f5f5ef;
+      --white: #ffffff;
+      --gray: #777;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--black);
+      color: white;
+      padding: 20px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .back-btn {
+      color: var(--yellow);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    main {
+      width: min(1000px, 92%);
+      margin: 50px auto;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .tag {
+      color: var(--green2);
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 60px);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #555;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .assistant {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .controls {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    select {
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      resize: vertical;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: var(--green2);
+    }
+
+    .ask-btn {
+      width: 100%;
+      margin-top: 15px;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: var(--green);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .ask-btn:hover {
+      background: var(--green2);
+    }
+
+    .answer {
+      margin-top: 25px;
+      padding: 20px;
+      background: var(--cream);
+      border-radius: 12px;
+      line-height: 1.7;
+      min-height: 100px;
+      white-space: pre-wrap;
+    }
+
+    .status {
+      color: var(--gray);
+      font-size: 14px;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin: 50px 0 25px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 18px 5%;
+      }
+
+      main {
+        margin-top: 30px;
+      }
+
+      .assistant {
+        padding: 18px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">
+      QENOAIX.
+    </div>
+
+    <a href="index.html" class="back-btn">
+      ← Back
+    </a>
+
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="tag">
+        QENOAIX / AI STUDY ASSISTANT
+      </div>
+
+      <h1>
+        Learn smarter.
+      </h1>
+
+      <p>
+        Ask questions, understand difficult concepts,
+        solve problems and learn step by step with AI.
+      </p>
+
+    </section>
+
+
+    <section class="assistant">
+
+      <div class="controls">
+
+        <select id="subject">
+
+          <option value="general">
+            General
+          </option>
+
+          <option value="mathematics">
+            Mathematics
+          </option>
+
+          <option value="physics">
+            Physics
+          </option>
+
+          <option value="chemistry">
+            Chemistry
+          </option>
+
+          <option value="computer-science">
+            Computer Science
+          </option>
+
+        </select>
+
+
+        <select id="level">
+
+          <option value="beginner">
+            Beginner
+          </option>
+
+          <option value="class-11">
+            Class 11
+          </option>
+
+          <option value="class-12">
+            Class 12
+          </option>
+
+          <option value="jee">
+            JEE
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <textarea
+        id="question"
+        placeholder="Ask your study question here..."
+      ></textarea>
+
+
+      <button
+        class="ask-btn"
+        id="askButton"
+      >
+        Ask QENOAIX AI →
+      </button>
+
+
+      <div
+        class="status"
+        id="status"
+      ></div>
+
+
+      <div
+        class="answer"
+        id="answer"
+      >
+        Your AI answer will appear here.
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © QENOAIX. — Research • Technology • AI
+  </footer>
+
+
+  <script>
+
+    const askButton =
+      document.getElementById("askButton");
+
+    const question =
+      document.getElementById("question");
+
+    const subject =
+      document.getElementById("subject");
+
+    const level =
+      document.getElementById("level");
+
+    const answer =
+      document.getElementById("answer");
+
+    const status =
+      document.getElementById("status");
+
+
+    askButton.addEventListener(
+      "click",
+      async function () {
+
+        const userQuestion =
+          question.value.trim();
+
+        if (!userQuestion) {
+
+          answer.textContent =
+            "Please enter a question first.";
+
+          return;
+
+        }
+
+
+        status.textContent =
+          "Thinking...";
+
+        answer.textContent =
+          "";
+
+
+        /*
+          AI CONNECTION WILL BE ADDED
+          IN THE NEXT STEP.
+        */
+
+        setTimeout(function () {
+
+          status.textContent =
+            "AI connection not added yet.";
+
+          answer.textContent =
+            "Your question was received:\n\n" +
+            userQuestion +
+            "\n\n" +
+            "Next, we will connect QENOAIX to the AI backend.";
+
+        }, 500);
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
